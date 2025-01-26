@@ -2,6 +2,15 @@
 
 ## Setup Instructions
 
+1. Download and install Ollama: https://ollama.com/
+2. Make sure Ollama is running when you run these models
+    - The code will handle downloading the models for you, test using something small like SMOLLM2!!
+3. Make sure Ollama is running when you run the code
+4. Setup your virtual environment according to instructions below
+
+
+Python version: `3.11.9`, you can use [pyenv](https://github.com/pyenv/pyenv) to manage your local python installs
+
 ### Linux/macOS
 
 1. Create a virtual environment:
@@ -35,16 +44,3 @@ python -m venv venv
 ```cmd
 pip install -r requirements.txt
 ```
-
-### Deactivating the Virtual Environment
-
-When you're done working, you can deactivate the virtual environment:
-
-```bash
-deactivate
-```
-
-## Notes
-- Make sure you have Python 3.8 or higher installed
-- The virtual environment directory (`venv`) is already added to `.gitignore`
-- Always activate the virtual environment before running any project scripts
