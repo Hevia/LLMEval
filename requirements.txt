@@ -6,3 +6,5 @@ torch
 jupyter
 spacy
 pandas
+rouge-score
+ollama
