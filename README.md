@@ -44,3 +44,9 @@ python -m venv venv
 ```cmd
 pip install -r requirements.txt
 ```
+### D3
+#### Data
+Data for D3 experiments can be found under `data/`:
+- `samsum/test.json`
+    - 819 instances
+    - 3 fields: `id`, `summary`, `dialogue`
