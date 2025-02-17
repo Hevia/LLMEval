@@ -8,3 +8,4 @@ spacy
 pandas
 rouge-score
 ollama
+py7zr
