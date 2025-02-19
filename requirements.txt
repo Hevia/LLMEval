@@ -9,3 +9,4 @@ pandas
 rouge-score
 ollama
 py7zr
+accelerate
