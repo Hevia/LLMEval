@@ -10,3 +10,4 @@ rouge-score
 ollama
 py7zr
 accelerate
+datasets
