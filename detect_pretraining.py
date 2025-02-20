@@ -74,6 +74,30 @@ def detect_pretraining(text: str, model_name: str, k_ratios=[0.05, 0.1, 0.2, 0.3
         
     return results
 
+def detect_pretraining_batch(texts: list[str], model_name: str, k_ratios=[0.1, 0.2, 0.3, 0.4, 0.5]) -> dict:
+    """
+    Detect if texts were likely in the model's training data using Min-K% probability.
+    
+    Args:
+        texts: List of texts to analyze
+        model_name: HuggingFace model name
+        k_ratios: List of K% ratios to test
+    
+    Returns:
+        Dictionary of Min-K% probability scores for each k_ratio
+    """
+    detector = PretrainingDetector(model_name)
+    results = []
+    
+    for text in texts:
+        text_results = {}
+        for ratio in k_ratios:
+            score = detector.get_min_k_probability(text, ratio)
+            text_results[f"Min_{ratio*100}% Prob"] = score
+        results.append(text_results)
+            
+    return results
+
 # Example usage:
 # if __name__ == "__main__":
 #     text = "Sample text to analyze for pretraining detection"
