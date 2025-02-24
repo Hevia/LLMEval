@@ -1,18 +1,27 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import numpy as np
-from pathlib import Path
 from tqdm import tqdm
 
 class PretrainingDetector:
-    def __init__(self, model_name):
-        """Initialize the detector with a HuggingFace model."""
+    def __init__(self, model_name, epsilon=0.5):
+        """
+        Initialize detector with model and decision threshold.
+        
+        Args:
+            model_name: Name of HuggingFace model
+            epsilon: Decision threshold for membership
+        """
         self.model = AutoModelForCausalLM.from_pretrained(model_name, return_dict=True, device_map='auto')
         self.model.eval()
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        
+        self.epsilon = epsilon
+
     def calculate_token_probabilities(self, text: str) -> list:
-        """Calculate log probabilities for each token in the text."""
+        """
+        Calculate log p(xi|x1,...,xi-1) for each token in sequence.
+        Returns list of log probabilities.
+        """
         input_ids = torch.tensor(self.tokenizer.encode(text)).unsqueeze(0)
         input_ids = input_ids.to(self.model.device)
         
@@ -22,88 +31,98 @@ class PretrainingDetector:
             
         # Get log probabilities for each token
         log_probs = torch.nn.functional.log_softmax(logits, dim=-1)
-        all_probs = []
+        token_log_probs = []
         
-        # Extract probability for each actual token
-        input_ids_processed = input_ids[0][1:]  # Skip first token for causal LM
+        # Extract log prob for each actual token given previous tokens
+        input_ids_processed = input_ids[0][1:]  # Skip first token
         for i, token_id in enumerate(input_ids_processed):
-            probability = log_probs[0, i, token_id].item()
-            all_probs.append(probability)
+            log_prob = log_probs[0, i, token_id].item()
+            token_log_probs.append(log_prob)
             
-        return all_probs
+        return token_log_probs
 
-    def get_min_k_probability(self, text: str, k_ratio: float) -> float:
+    def min_k_prob(self, text: str, k_ratio: float) -> float:
         """
-        Calculate the Min-K% probability score for the text.
+        Implements Algorithm 1: Pretraining Data Detection using Min-K% Prob
         
         Args:
-            text: Input text to analyze
-            k_ratio: Ratio of tokens to consider (e.g., 0.1 for 10%)
+            text: Input sequence
+            k_ratio: Percentage of lowest probability tokens to consider
             
         Returns:
-            Average log probability of the k% least likely tokens
+            Min-K% probability score
         """
-        # Get token probabilities
-        token_probs = self.calculate_token_probabilities(text)
+        # Get log p(xi|x1,...,xi-1) for all tokens
+        token_log_probs = self.calculate_token_probabilities(text)
         
-        # Calculate k lowest probabilities
-        k_length = int(len(token_probs) * k_ratio)
-        lowest_k_probs = np.sort(token_probs)[:k_length]
+        # Select k% tokens with lowest probability
+        k_size = max(1, int(len(token_log_probs) * k_ratio))
+        min_k_probs = np.sort(token_log_probs)[:k_size]
         
-        # Return negative mean (higher score = more likely to be in training data)
-        return -np.mean(lowest_k_probs).item()
+        # Calculate average log probability of min-k tokens
+        score = -np.mean(min_k_probs).item()
+        
+        return score
+    
+    def predict(self, prompt: str, gold_text: str, k_ratio: float) -> tuple[bool, float]:
+        """
+        Predict if prompt was derived from gold_text using Min-K% Prob.
+        
+        Args:
+            prompt: Text to evaluate
+            gold_text: Gold standard text to compare against
+            k_ratio: Percentage of tokens to consider
+            
+        Returns:
+            (is_member, score) tuple where:
+            - is_member: True if prompt likely derived from gold_text
+            - score: Min-K% probability score
+        """
+        # Get probabilities for both texts
+        prompt_probs = self.calculate_token_probabilities(prompt)
+        gold_probs = self.calculate_token_probabilities(gold_text)
+        
+        # Select k% tokens with lowest probability from prompt
+        k_size = max(1, int(len(prompt_probs) * k_ratio))
+        min_k_indices = np.argsort(prompt_probs)[:k_size]
+        
+        # Calculate score using corresponding positions in gold text
+        min_k_gold_probs = [gold_probs[i] for i in min_k_indices]
+        score = -np.mean(min_k_gold_probs).item()
+        
+        # Compare against threshold
+        is_member = score <= self.epsilon
+        return is_member, score
 
-def detect_pretraining(text: str, model_name: str, k_ratios=[0.05, 0.1, 0.2, 0.3]) -> dict:
+def detect_pretraining_batch(prompts: list[str], gold_texts: list[str], 
+                           model_name: str, k_ratios=[0.05, 0.1, 0.2, 0.3],
+                           epsilon=0.5) -> dict:
     """
-    Detect if text was likely in the model's training data using Min-K% probability.
+    Run detection on a batch of texts comparing against gold standards.
     
     Args:
-        text: Text to analyze
+        prompts: List of texts to evaluate
+        gold_texts: List of gold standard texts to compare against
         model_name: HuggingFace model name
-        k_ratios: List of K% ratios to test
-        
-    Returns:
-        Dictionary of Min-K% probability scores for each k_ratio
+        k_ratios: List of k% values to test
+        epsilon: Decision threshold
     """
-    detector = PretrainingDetector(model_name)
+    detector = PretrainingDetector(model_name, epsilon)
     results = {}
     
     for ratio in k_ratios:
-        score = detector.get_min_k_probability(text, ratio)
-        results[f"Min_{ratio*100}% Prob"] = score
+        scores = []
+        predictions = []
+        for prompt, gold in zip(prompts, gold_texts):
+            is_member, score = detector.predict(prompt, gold, ratio)
+            scores.append(score)
+            predictions.append(int(is_member))
+            
+        results[f"Min_{ratio*100}% Prob"] = {
+            'scores': scores,
+            'predictions': predictions,
+            'gold_texts': gold_texts,
+            'prompts': prompts
+        }
         
     return results
-
-def detect_pretraining_batch(texts: list[str], model_name: str, k_ratios=[0.1, 0.2, 0.3, 0.4, 0.5]) -> dict:
-    """
-    Detect if texts were likely in the model's training data using Min-K% probability.
-    
-    Args:
-        texts: List of texts to analyze
-        model_name: HuggingFace model name
-        k_ratios: List of K% ratios to test
-    
-    Returns:
-        Dictionary of Min-K% probability scores for each k_ratio
-    """
-    detector = PretrainingDetector(model_name)
-    results = []
-    
-    for text in texts:
-        text_results = {}
-        for ratio in k_ratios:
-            score = detector.get_min_k_probability(text, ratio)
-            text_results[f"Min_{ratio*100}% Prob"] = score
-        results.append(text_results)
-            
-    return results
-
-# Example usage:
-# if __name__ == "__main__":
-#     text = "Sample text to analyze for pretraining detection"
-#     model_name = "gpt2"  # or any other HuggingFace model
-
-#    results = detect_pretraining(text, model_name)
-#    print("Detection Results:")
-#    for k, score in results.items():
-#        print(f"{k}: {score:.4f}") 
