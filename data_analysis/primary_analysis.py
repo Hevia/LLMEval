@@ -44,10 +44,13 @@ def safe_literal_eval(val):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("file_dir", type=str)
-    parser.add_argument("output_dir", type=str)
-
+    
     args= parser.parse_args()
-    df = pd.read_csv(args.file_dir, dtype=object)
+
+    input_dir = f'/Users/chenxinliu/LLMEval/output/{args.file_dir}'
+    output_dir = f'data_{args.file_dir}'
+    df = pd.read_csv(input_dir, dtype=object)
+
 
     df["Min_K_Responses"] = df["Min_K_Responses"].apply(safe_literal_eval)
 
@@ -83,4 +86,4 @@ if __name__ == "__main__":
 
     df = df.drop(columns=['rouge_sim_scores', 'Min_K_Responses'])
 
-    df.to_csv(args.output_dir)
+    df.to_csv(output_dir)
