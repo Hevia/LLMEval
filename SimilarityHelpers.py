@@ -18,3 +18,18 @@ def get_rouge_scores(gold: str, test: str) -> dict:
     score = scorer.score(gold, test)
     return score
 
+def get_levenshtein_distance(str1, str2):
+    if len(str1) > len(str2):
+        str1, str2 = str2, str1
+
+    distances = range(len(str1) + 1)
+    for index2, char2 in enumerate(str2):
+        new_distances = [index2 + 1]
+        for index1, char1 in enumerate(str1):
+            if char1 == char2:
+                new_distances.append(distances[index1])
+            else:
+                new_distances.append(1 + min((distances[index1], distances[index1 + 1], new_distances[-1])))
+        distances = new_distances
+
+    return distances[-1]
