@@ -11,3 +11,4 @@ ollama
 py7zr
 accelerate
 datasets
+bitsandbytes
