@@ -5,11 +5,11 @@ from pathlib import Path
 from tqdm import tqdm
 
 class PretrainingDetector:
-    def __init__(self, model_name):
+    def __init__(self, model_obj):
         """Initialize the detector with a HuggingFace model."""
-        self.model = AutoModelForCausalLM.from_pretrained(model_name, return_dict=True, device_map='auto')
+        self.model = model_obj.model
         self.model.eval()
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.tokenizer = model_obj.tokenizer
         
     def calculate_token_probabilities(self, text: str) -> list:
         """Calculate log probabilities for each token in the text."""
@@ -74,7 +74,7 @@ def detect_pretraining(text: str, model_name: str, k_ratios=[0.05, 0.1, 0.2, 0.3
         
     return results
 
-def detect_pretraining_batch(texts: list[str], model_name: str, k_ratios=[0.1, 0.2, 0.3, 0.4, 0.5]) -> dict:
+def detect_pretraining_batch(texts: list[str], model_obj, k_ratios=[0.1, 0.2, 0.3, 0.4, 0.5]) -> dict:
     """
     Detect if texts were likely in the model's training data using Min-K% probability.
     
@@ -86,7 +86,7 @@ def detect_pretraining_batch(texts: list[str], model_name: str, k_ratios=[0.1, 0
     Returns:
         Dictionary of Min-K% probability scores for each k_ratio
     """
-    detector = PretrainingDetector(model_name)
+    detector = PretrainingDetector(model_obj)
     results = []
     
     for text in texts:
