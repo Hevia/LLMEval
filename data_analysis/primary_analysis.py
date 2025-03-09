@@ -1,17 +1,10 @@
 import ast
 import pandas as pd
 import re
-<<<<<<< HEAD
-import matplotlib.pyplot as plt
-import seaborn as sns
-from ast import literal_eval # this will evaluate a string as literal Python objs
-import argparse
-=======
 from ast import literal_eval # this will evaluate a string as literal Python objs
 import argparse
 from glob import glob
 import os
->>>>>>> origin/jessica-dev
 
 def parse_rouge_scores(rouge_str):
     """Convert a stringified ROUGE score dictionary into a proper dictionary."""
@@ -50,52 +43,6 @@ def safe_literal_eval(val):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-<<<<<<< HEAD
-    parser.add_argument("file_dir", type=str)
-    
-    args= parser.parse_args()
-
-    input_dir = f'/Users/chenxinliu/LLMEval/output/{args.file_dir}'
-    output_dir = f'data_{args.file_dir}'
-    df = pd.read_csv(input_dir, dtype=object)
-
-
-    df["Min_K_Responses"] = df["Min_K_Responses"].apply(safe_literal_eval)
-
-    # Verify the conversion
-    print(type(df["Min_K_Responses"][0]))  # Should print <class 'dict'>
-                                    
-    df['rouge_sim_scores'] = df['rouge_sim_scores'].apply(parse_rouge_scores)
-    df['cos_sim_scores'] = df['cos_sim_scores'].apply(float)
-
-
-    # Apply parsing to each dictionary entry
-    df = df.join(df['rouge_sim_scores'].apply(lambda x: pd.Series({
-        'rouge1_precision': x['rouge1']['precision'],
-        'rouge1_recall': x['rouge1']['recall'],
-        'rouge1_f1': x['rouge1']['f1'],
-        'rouge2_precision': x['rouge2']['precision'],
-        'rouge2_recall': x['rouge2']['recall'],
-        'rouge2_f1': x['rouge2']['f1'],
-        'rougeL_precision': x['rougeL']['precision'],
-        'rougeL_recall': x['rougeL']['recall'],
-        'rougeL_f1': x['rougeL']['f1']
-    })))
-
-
-    df = df.join(df['Min_K_Responses'].apply(lambda x: pd.Series({
-        'Min_10.0%_Prob': x['Min_10.0% Prob'],
-        'Min_20.0%_Prob': x['Min_20.0% Prob'],
-        'Min_30.0%_Prob': x['Min_30.0% Prob'],
-        'Min_40.0%_Prob': x['Min_40.0% Prob'],
-        'Min_50.0%_Prob': x['Min_50.0% Prob']
-    })))
-
-
-    df = df.drop(columns=['rouge_sim_scores', 'Min_K_Responses'])
-
-    df.to_csv(output_dir)
-=======
     parser.add_argument("source_data", type=str)
     parser.add_argument("model_group", type=str)
     
@@ -149,4 +96,3 @@ if __name__ == "__main__":
         
 
 
->>>>>>> origin/jessica-dev
