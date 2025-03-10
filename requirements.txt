@@ -12,3 +12,5 @@ py7zr
 accelerate
 datasets
 bitsandbytes
+bert-score
+evaluate

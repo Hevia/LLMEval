@@ -37,5 +37,5 @@ def get_levenshtein_distance(str1, str2):
 
 def get_bert_score_batch(gold: list[str], test: list[str]) -> float:
     bert_score = load("bertscore")
-    score = bert_score.compute(predictions=[test], references=[gold])
+    score = bert_score.compute(predictions=test, references=gold)
     return score
