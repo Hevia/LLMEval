@@ -60,6 +60,7 @@ if __name__ == "__main__":
                                         
         df['rouge_sim_scores'] = df['rouge_sim_scores'].apply(parse_rouge_scores)
         df['cos_sim_scores'] = df['cos_sim_scores'].apply(float)
+        df['levenshtein_distance'] = df['levenshtein_distance'].apply(float)
 
 
         # Apply parsing to each dictionary entry
