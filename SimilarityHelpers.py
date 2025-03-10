@@ -1,6 +1,7 @@
 from rouge_score import rouge_scorer
 from sentence_transformers.util import cos_sim
 import torch
+from evaluate import load
 
 def get_cos_similarity_score(gold_embedding: torch.Tensor, test_embedding: torch.Tensor) -> float:
     """
@@ -33,3 +34,8 @@ def get_levenshtein_distance(str1, str2):
         distances = new_distances
 
     return distances[-1]
+
+def get_bert_score_batch(gold: list[str], test: list[str]) -> float:
+    bert_score = load("bertscore")
+    score = bert_score.compute(predictions=[test], references=[gold])
+    return score
