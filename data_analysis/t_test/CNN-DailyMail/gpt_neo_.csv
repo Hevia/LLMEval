@@ -1,0 +1,4 @@
+,cos_sim_scores,levenshtein_distance,rouge1_precision,rouge1_recall,rouge1_f1,rouge2_precision,rouge2_recall,rouge2_f1,rougeL_precision,rougeL_recall,rougeL_f1,Min_10.0%_Prob,Min_20.0%_Prob,Min_30.0%_Prob,Min_40.0%_Prob,Min_50.0%_Prob
+df_gpt_neo_125m vs df_gpt_neo_1_3b,0,0,0,0,0,0,0,0,0,0,0,"1, 10.8609, 10.1481","1, 9.4261, 8.6304","1, 8.4367, 7.5887","1, 7.6085, 6.742","1, 6.8797, 6.017"
+df_gpt_neo_125m vs df_gpt_neo_2_7b,0,0,0,0,0,0,0,0,0,0,0,"1, 10.8609, 10.0165","1, 9.4261, 8.4883","1, 8.4367, 7.4307","1, 7.6085, 6.576","1, 6.8797, 5.8512"
+df_gpt_neo_1_3b vs df_gpt_neo_2_7b,0,0,0,0,0,0,0,0,0,0,0,"1, 10.1481, 10.0165","1, 8.6304, 8.4883","1, 7.5887, 7.4307","1, 6.742, 6.576","1, 6.017, 5.8512"
