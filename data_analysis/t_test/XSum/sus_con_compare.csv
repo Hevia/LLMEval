@@ -1,3 +1,0 @@
-,cos_sim_scores,levenshtein_distance,rouge1_precision,rouge1_recall,rouge1_f1,rouge2_precision,rouge2_recall,rouge2_f1,rougeL_precision,rougeL_recall,rougeL_f1,Min_10.0%_Prob,Min_20.0%_Prob,Min_30.0%_Prob,Min_40.0%_Prob,Min_50.0%_Prob
-df_gpt_neo_125m vs df_smol_135m,0,"1, 97.1193, 102.9124","1, 0.1302, 0.1045",0,"1, 0.1482, 0.1274",0,0,0,"1, 0.1036, 0.082","1, 0.1429, 0.1355","1, 0.1177, 0.1",0,0,0,"1, 7.1658, 7.8712","1, 6.4503, 7.0355"
-df_opt_125m vs df_smol_135m,0,"1, 99.1105, 102.9124","1, 0.123, 0.1045",0,"1, 0.1391, 0.1274",0,0,0,"1, 0.0963, 0.082",0,"1, 0.1088, 0.1",0,0,"1, 7.5302, 8.8508","1, 6.6943, 7.8712","1, 5.9835, 7.0355"
