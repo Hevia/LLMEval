@@ -53,7 +53,6 @@ Marshall: <file_gif>
 Ethan: <file_gif>
 Scott","Ethan, Toby and Marshall are making fun of Scott.",0.5947916507720947,40.0,0.3333333333333333,0.42857142857142855,0.375,0.0,0.0,0.0,0.2222222222222222,0.2857142857142857,0.25,8.358242988586426,7.980023145675659,7.313891728719075,6.938557386398315,6.39153250058492
 17,facebook/opt-2.7b,Summarize the following text: ,Samsum,                    ,Igor has a lot of work on his notice period and he feels demotivated. John thinks he should do what he has to do nevertheless. ,0.1950464397668838,107.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.982276598612467,9.6346804300944,7.97439792421129,6.8864829540252686,6.135915454228719
-18,facebook/opt-2.7b,Summarize the following text: ,Samsum,,Clara is rewatching Dear White People and strongly recommends it to Neela.,0.0969450622797012,71.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.755727767944336,10.954711278279623,10.48824667930603,9.162532250086466,7.8753993809223175
 19,facebook/opt-2.7b,Summarize the following text: ,Samsum,"!
 Ernest: I'm sure it was a drunk driver, I'm sure you'll",Mike took his car into garage today. Ernest is relieved as someone had just crashed into a red Honda which looks like Mike's. ,0.5086233615875244,100.0,0.08333333333333333,0.14285714285714285,0.10526315789473685,0.0,0.0,0.0,0.08333333333333333,0.14285714285714285,0.10526315789473685,10.450008869171143,9.084853839874267,8.282392859458923,7.701840496063232,6.995377210470346
 20,facebook/opt-2.7b,Summarize the following text: ,Samsum,"
@@ -637,7 +636,6 @@ I'm not sure if this is the right place to post this, but I'm looking",Betty and
 
 I think this is a great idea. I think it would be great if you could have",Sam wants to buy a custom dress as a surprise for his wife. It should be black and elegant. The store employee sent him some pictures for reference. Sam decided on the features he likes. His product number is 898998 and he will place the order on the company's website.,0.0783076286315918,223.0,0.0784313725490196,0.23529411764705882,0.11764705882352941,0.0,0.0,0.0,0.058823529411764705,0.17647058823529413,0.08823529411764706,8.881425476074218,7.684391845356334,6.781857210047105,6.134933233261108,5.505151148500113
 205,facebook/opt-2.7b,Summarize the following text: ,Samsum, I'm not a phone selfie person either. I'm not a fan of them. I'm more,Kamden hasn't used social media recently. He uses messenger only and wants to get Mckinley's photographs.,0.2755402624607086,79.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.330706596374512,9.533531951904298,8.812015737806048,8.021561193466187,7.644609371821086
-206,facebook/opt-2.7b,Summarize the following text: ,Samsum,,"After work, Mike is going to go to the gym and then home. He invites Jason to bring some food and come over. They can play 2 on ps4.",0.1827249377965927,129.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.968722979227701,8.606780608495077,7.534947156906128,6.673645496368408,5.7270588313832
 207,facebook/opt-2.7b,Summarize the following text: ,Samsum,"=-=-=-=-=-=-=-=
 
 Daisy: hey whats up
@@ -1879,7 +1877,6 @@ I think this is a great idea.",Alice's dad is coming over for a month to decorat
 623,facebook/opt-2.7b,Summarize the following text: ,Samsum," I'm going to show my mom! =-=-=-=-=-=-=-
 
 Kelly: What's the sc",The scariest place for Jessica was the Capuchin Catacombs in Palermo.,0.1916840374469757,62.0,0.09090909090909091,0.08333333333333333,0.08695652173913043,0.0,0.0,0.0,0.09090909090909091,0.08333333333333333,0.08695652173913043,10.901327133178711,9.842506726582846,8.222393131256103,7.184957231794085,6.392571740680271
-624,facebook/opt-2.7b,Summarize the following text: ,Samsum,,Maria wants to work as a freelancer. Spencer is an artist. The agency and social media help him to get new clients. He earns around £1000 a month. Spencer encourages Maria to develop her talent and to try freelancing.,0.0593122579157352,214.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.204707860946655,8.201002915700277,7.233817986079624,6.5559228791130915,5.8925893514052685
 625,facebook/opt-2.7b,Summarize the following text: ,Samsum," =-=-=-=-=
 Joe: I'm sure you'll have a great time :)
 Tim: Thanks",Tim wants to organise a board games night for his colleagues. Joe has some good ideas and tips on where to start. ,0.281051903963089,91.0,0.13636363636363635,0.25,0.1764705882352941,0.0,0.0,0.0,0.045454545454545456,0.08333333333333333,0.05882352941176471,9.704015254974365,8.741352653503418,7.91177579334804,6.9238978862762455,6.341566562652588
@@ -2393,7 +2390,6 @@ Ralph: I’m sorry, I didn’t mean to make you laugh",Ralph told Andrew a joke.
 798,facebook/opt-2.7b,Summarize the following text: ,Samsum," I was shocked!!
 Linda: I was shocked!!
 Linda: I was shocked!!",Linda missed her train and the next one is in one hour. A return to Amsterdam was 80 euros.,0.3503785729408264,72.0,0.10526315789473684,0.18181818181818182,0.13333333333333333,0.0,0.0,0.0,0.10526315789473684,0.18181818181818182,0.13333333333333333,10.59095287322998,9.54121470451355,8.200859944025675,7.382702529430389,6.469910209829157
-799,facebook/opt-2.7b,Summarize the following text: ,Samsum,,Martha likes Ophelia's lenses and wants to buy similar ones. Ophelia got them from Crazy Lenses.,0.0861371532082557,93.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.350217342376709,9.686957359313965,8.982727936335973,7.545193314552307,6.846601943174998
 800,facebook/opt-2.7b,Summarize the following text: ,Samsum,"  [*]
 Linda: Thanks Dad, I'll send them tomorrow! [*]
 Michael: ",Linda wants to buy flowers for her mother and asks Michael which flowers does she like. Michael suggests Linda to buy freesias.,0.4586872160434723,104.0,0.09090909090909091,0.2222222222222222,0.1290322580645161,0.0,0.0,0.0,0.09090909090909091,0.2222222222222222,0.1290322580645161,9.594151973724365,8.408182048797608,7.333063125610352,6.7673756122589115,5.935703864464393

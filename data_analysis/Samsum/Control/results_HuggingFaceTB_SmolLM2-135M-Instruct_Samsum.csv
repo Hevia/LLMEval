@@ -15,7 +15,6 @@ Emma:",Emma will be home soon and she will let Will know.,0.5754280090332031,45.
 4,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Ollie: Hi, are you in Warsaw?
 Jane: no,",Jane is in Warsaw. Ollie and Jane has a party. Jane lost her calendar. They will get a lunch this week on Friday. Ollie accidentally called Jane and talked about whisky. Jane cancels lunch. They'll meet for a tea at 6 pm.,0.6748881936073303,189.0,0.09302325581395349,0.4444444444444444,0.15384615384615385,0.023809523809523808,0.125,0.04,0.06976744186046512,0.3333333333333333,0.11538461538461539,9.916627311706543,8.581800677559592,7.848693549633026,7.012560454281894,6.287496830735888
-5,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Hilary has the keys to the apartment. Benjamin wants to get them and go take a nap. Hilary is having lunch with some French people at La Cantina. Hilary is meeting them at the entrance to the conference hall at 2 pm. Benjamin and Elliot might join them. They're meeting for the drinks in the evening.,0.0885861814022064,297.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.62205139795939,8.123497045957125,7.221595811843872,6.520252051176848,5.879819771822761
 6,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Max: Yes, but they have different things so I usually buy things from ",Payton provides Max with websites selling clothes. Payton likes browsing and trying on the clothes but not necessarily buying them. Payton usually buys clothes and books as he loves reading.,0.2960551381111145,143.0,0.13333333333333333,0.2857142857142857,0.18181818181818182,0.034482758620689655,0.07692307692307693,0.04761904761904762,0.13333333333333333,0.2857142857142857,0.18181818181818182,11.90256373087565,9.697030748639788,8.79330759048462,7.760915449687412,7.114937291425817
 7,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
@@ -53,8 +52,6 @@ Neela: Not much",Clara is rewatching Dear White People and strongly recommends i
 19,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Ernest: Hey Mike, did you park your car on our street?
 ",Mike took his car into garage today. Ernest is relieved as someone had just crashed into a red Honda which looks like Mike's. ,0.6469589471817017,95.0,0.125,0.25,0.16666666666666666,0.0,0.0,0.0,0.08333333333333333,0.16666666666666666,0.1111111111111111,13.803027629852295,10.704747200012207,9.356127917766571,8.436829090118408,7.775509561811175
-20,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Beth wants to organize a girls weekend to celebrate her mother's 40th birthday. She also wants to work at Deidre's beauty salon. Deidre offers her a few hours on Saturdays as work experience. They set up for a meeting tomorrow.,0.0587994344532489,224.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.008388328552247,8.806244763461025,7.665621340274811,6.724741209637035,5.961367181369236
-21,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Gloria has an exam soon. It lasts 4 hours. Emma sent her a link to a website with some texts from previous years so that she can prepare for the exam better.,0.0183147527277469,154.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.83367125193278,9.657513550349645,8.20159842751243,7.469531263623919,6.643989562988281
 22,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Adam: Have you talked to May?
 Karen: Yes, yesterday,",Adam and Karen are worried that May suffers from depression. Karen will call her friend who is a psychologist and ask for advice. ,0.5143898129463196,104.0,0.13043478260869565,0.3,0.18181818181818182,0.0,0.0,0.0,0.13043478260869565,0.3,0.18181818181818182,9.63438367843628,8.26631956100464,7.34137099129813,6.424488544464111,5.881123046080272
@@ -71,7 +68,6 @@ Myah: I can't see the phone number very well.
 Selah",Selah called a person that did not pick up.,0.4078468084335327,48.0,0.1111111111111111,0.08333333333333333,0.09523809523809525,0.0,0.0,0.0,0.1111111111111111,0.08333333333333333,0.09523809523809525,14.415346145629883,12.393592357635498,11.242888450622559,10.023651123046875,9.008500099182129
 27,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Eric: Hey Bella, What happened today in boss's room? Was he",Bella and Eric dismissed a request of a client. Their boss appreciated the decision. He brings in new clients.,0.6283156871795654,80.0,0.2631578947368421,0.38461538461538464,0.3125,0.0,0.0,0.0,0.15789473684210525,0.23076923076923078,0.18749999999999997,14.413025379180908,11.930489778518677,10.497707287470499,9.370874464511871,8.10066760670055
-28,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Emma is about to take a nap in the back of the bus to New York. Ben and Emma will be there around 4.30 pm. Ben will wake Emma up 15 minutes prior to their arrival.,0.0225701890885829,160.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.027492761611938,6.986034923129612,6.308742193075327,5.53116238117218,5.068084196610884
 29,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Jesse: I have an idea that'll cheer up!
 Melvin:","Jesse, Melvin, Lee and Maxine are going to take part in the Christmas charity action of the foundation called Refuge, which helps women and children who escape from abuse.",0.413945734500885,139.0,0.06896551724137931,0.18181818181818182,0.1,0.0,0.0,0.0,0.06896551724137931,0.18181818181818182,0.1,13.001818656921387,10.195768628801618,9.125065517425536,7.984982013702393,7.323609702727374
@@ -98,7 +94,6 @@ Judy: Why do I always attract jerks?
 Janice: It",Judy thinks she's always attracted to bad guys.,0.562126100063324,37.0,0.3333333333333333,0.3,0.3157894736842105,0.125,0.1111111111111111,0.11764705882352941,0.3333333333333333,0.3,0.3157894736842105,8.882207870483398,8.81489610671997,8.615558306376139,8.223077774047852,7.847639656066894
 38,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Riley: Chloe is on TV! James is on which channel?",Riley and James watch Chloe on tv undergoing a metamorphosis.,0.7859753370285034,48.0,0.5,0.45454545454545453,0.47619047619047616,0.1111111111111111,0.1,0.10526315789473685,0.4,0.36363636363636365,0.380952380952381,15.18649959564209,14.04806661605835,13.590846379597982,11.827726745605469,10.876767635345459
-39,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Tina will catch the evening flight back home. Ala is on her way to the meeting. She will let Tina know how it went.,0.1698026657104492,112.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.363428592681885,8.686600875854491,7.770349383354187,6.915884754874489,6.284474577222552
 40,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Sebastian: It's been a year since we moved here.
 ","Sebastian is very happy with his life, and shares this happiness with Kevin.",0.4266547262668609,55.0,0.07692307692307693,0.09090909090909091,0.08333333333333334,0.0,0.0,0.0,0.07692307692307693,0.09090909090909091,0.08333333333333334,11.527495384216309,9.465771039326986,7.660586833953857,7.110401312510173,6.336092472076416
@@ -190,7 +185,6 @@ Linda:",Linda and Laura are going to an Italian restaurant tomorrow.,0.506767988
 Natalie: Well, I see somethings going on here at last",Anna organises a birthday's party on the 6th of November at 19:30.,0.1509595811367035,52.0,0.14285714285714285,0.18181818181818182,0.16,0.0,0.0,0.0,0.14285714285714285,0.18181818181818182,0.16,10.538129806518555,9.739122867584229,8.159897009531656,7.070597529411316,6.23632926940918
 73,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Mia: babe, do you mind if I go out after work tonight","Mia is going out after work tonight with her female friends. If she wants, Elliot will come and pick her up.",0.5780478715896606,82.0,0.3333333333333333,0.5384615384615384,0.41176470588235287,0.2,0.3333333333333333,0.25,0.2857142857142857,0.46153846153846156,0.35294117647058826,11.26317548751831,8.522268486022949,7.574467931474958,6.683402347564697,6.287216265996297
-74,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Jayden explains Brennan why she doesn't want to be pregnant.,0.0945718139410018,57.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,13.55177116394043,13.355677604675293,12.269148111343384,11.470522689819337,9.836781229291644
 75,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Steve: BTW, USA won last night!
 Gulab:",USA won last night. England is playing against Croatia tomorrow at 2.,0.4905530512332916,55.0,0.3333333333333333,0.5,0.4,0.2727272727272727,0.42857142857142855,0.33333333333333326,0.3333333333333333,0.5,0.4,12.188904762268066,10.807511329650879,8.191929697990417,7.424844646453858,6.49244931765965
@@ -318,7 +312,6 @@ George: Hi Donna. I've been trying to catch you.
 Don",Donna will pay George a visit tonight to discuss a personal matter.,0.5566621422767639,55.0,0.25,0.25,0.25,0.0,0.0,0.0,0.16666666666666666,0.16666666666666666,0.16666666666666666,12.84503173828125,11.720873832702637,10.066597779591879,8.530835437774659,7.955966869990031
 122,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Louis is going to see his mom, and Fabian is going to see his",Louis finishes the conversation with Fabian because his mother is calling.,0.7538725137710571,58.0,0.36363636363636365,0.26666666666666666,0.30769230769230765,0.0,0.0,0.0,0.2727272727272727,0.2,0.23076923076923075,14.08726692199707,12.445310592651367,11.263738632202148,10.004925012588501,8.400458971659342
-123,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Irene will take Crystal's son shopping for clothes.,0.0311463885009288,48.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,15.462026596069336,14.61768627166748,13.918047587076822,12.37001383304596,11.260186195373535
 124,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Tony: Sweet little cat
 Amy: Adorable!!",Tony sent a photo of his cat to Amy and Lucas.,0.6669391989707947,39.0,0.2727272727272727,0.42857142857142855,0.33333333333333326,0.0,0.0,0.0,0.2727272727272727,0.42857142857142855,0.33333333333333326,13.53447437286377,11.335392475128174,10.405648867289225,9.88677191734314,8.40904132525126
@@ -449,7 +442,6 @@ Pam: Hey Robert, you said you're helping with Tom's birthday.",Robert will pick 
 173,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Shelly: This year, I'm volunteering at the food shelter.
 ","Shelly is voluntering at a food shelter and asks if others do some volunteer work. Tracy is not into that, but Jody always does some charity for Christmas.",0.7154620289802551,116.0,0.17857142857142858,0.45454545454545453,0.25641025641025644,0.07407407407407407,0.2,0.10810810810810811,0.17857142857142858,0.45454545454545453,0.25641025641025644,13.065948486328125,10.505937031337194,9.4779953956604,8.685175963810511,7.958647913402981
-174,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Jim will check out Max's latest music project when he gets home.,0.0737697929143905,62.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.489959716796875,8.632591485977173,7.574173132578532,6.645602989196777,6.381287415822347
 175,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Kane: Have you heard the new 30 seconds to Mars album?",Kane recommends the new 30 Seconds to Mars album to Shannon.,0.7028557062149048,35.0,0.7272727272727273,0.6666666666666666,0.6956521739130435,0.6,0.5454545454545454,0.5714285714285713,0.7272727272727273,0.6666666666666666,0.6956521739130435,12.344656944274902,10.91780948638916,10.244727849960327,9.259389400482178,8.609610216958183
 176,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
@@ -498,7 +490,6 @@ Emely: Hey, can you help me with one task? I have to","Titus agrees to help Emel
 191,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Aldo: Hi, I got your email.
 Marco: Yes",Marco will read Aldo's 12 page article that he spent 2 weeks writing.,0.4385958313941955,56.0,0.14285714285714285,0.2222222222222222,0.17391304347826086,0.0,0.0,0.0,0.07142857142857142,0.1111111111111111,0.08695652173913043,12.43777847290039,10.069193045298258,8.488473224639893,7.61075564793178,6.870794932047526
-192,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,"Harris' friend, Aoki, who lives in Michigan, died yesterday. Harris hasn't seen her for a few months.",0.1149134486913681,98.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,13.123735427856445,10.084313583374023,9.114545549665179,7.666504669189453,6.969339668750763
 193,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Hannah: Happy New Year!
 
@@ -511,7 +502,6 @@ Julia: I like my Instagram, Snapchat, Twitter, and sometimes Facebook",Jessica p
 196,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Anne: I hate that bitch!
 Catherine: What did she do",Miranda called Tom yesterday and spoke to him in a sweet way. Anne is angry with her because Anne is dating Tom.,0.5622100234031677,88.0,0.045454545454545456,0.09090909090909091,0.060606060606060615,0.0,0.0,0.0,0.045454545454545456,0.09090909090909091,0.060606060606060615,15.086078643798828,12.353119134902954,10.577451160975865,9.662520090738932,8.422549605369568
-197,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Barbara and Eva described their dietary requirements in the website given by Ella.,0.0225051399320364,79.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,16.72747802734375,13.782250881195068,11.94369888305664,11.514303207397461,10.829767772129603
 198,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Joshua: Hi Sarah, when will you be arriving?
 Sarah: I",Sarah will arrive to New York on Thursday. Joshua expects to get a gift.,0.6511831283569336,60.0,0.2857142857142857,0.36363636363636365,0.32,0.0,0.0,0.0,0.21428571428571427,0.2727272727272727,0.23999999999999996,11.5853910446167,9.087150573730469,8.606003165245056,7.9395116964976,7.624157973698208
@@ -551,7 +541,6 @@ Ellie: Hey, are you at the university?
 Aaliyah:",Ellie's class is in 342 on the second floor.,0.5421944856643677,44.0,0.2,0.2222222222222222,0.2105263157894737,0.0,0.0,0.0,0.2,0.2222222222222222,0.2105263157894737,13.0100736618042,10.013270854949951,7.978632807731628,7.405873107910156,6.577010699680874
 212,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Nathan: 🤔🤔🤔🤔�",Nathan and Aaron are discussing a video which Nathan sent. ,0.5084247589111328,48.0,0.1,0.5,0.16666666666666669,0.0,0.0,0.0,0.1,0.5,0.16666666666666669,13.56875228881836,12.560319423675537,11.004579861958822,10.160132646560669,8.928947607676188
-213,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,William is coming back in 5 minutes as he had to queue for 20 minutes.,0.0907806605100631,67.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.520191192626953,7.432862281799316,6.192200946807861,5.4521781376429965,4.992636495166355
 214,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Bob: Did you reserve the tickets for tomorrow?
 Melanie: Jake",Jake reserved 3 tickets for tomorrow 7 pm. He got 30% discount.,0.5597004890441895,50.0,0.4166666666666667,0.45454545454545453,0.43478260869565216,0.18181818181818182,0.2,0.1904761904761905,0.3333333333333333,0.36363636363636365,0.34782608695652173,14.207746505737305,10.619913101196289,8.57099962234497,7.455681392124721,6.71960253185696
@@ -666,14 +655,12 @@ Jeff: Do you know anything about the agreement?
 Vladimir: The","In the agreement it was decided that it's neither a sea nor a lake and it will have a special legal status. They will also completely divide the seabed up. It's rich in resources, mostly gas and oil.",0.3347415030002594,164.0,0.075,0.2727272727272727,0.1176470588235294,0.02564102564102564,0.1,0.04081632653061225,0.075,0.2727272727272727,0.1176470588235294,10.127808570861816,9.15616261959076,7.970253149668376,6.864675886490765,6.167322215579805
 255,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Joe: This job is wearing him up. He loves it, but because",Joe's job is wearing him up. Tim's friend Terry quit his job because he was burned out.,0.6484940648078918,59.0,0.42105263157894735,0.6153846153846154,0.5,0.2222222222222222,0.3333333333333333,0.26666666666666666,0.3684210526315789,0.5384615384615384,0.4375,11.188157558441162,9.794935703277588,9.041859070460001,8.332370519638062,7.561205720901489
-256,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,"Natalie is checking if it's worth going to the new club at Regents Street. Denise thinks the club is great. Judy's friends also recommend the place, so Judy is going there this weekend. Natalie will go to the club with Judy, Miranda and Helen on Saturday.",0.0178698115050792,252.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.345142555236816,9.059403852982955,7.787845499375287,6.9953944786735205,6.399387918669602
 257,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Jamie: What do you think about doing those presentations in groups?
 Marl","Jamie, Marlo, Jimmy and Alex's teacher requires their class to divide into 2 groups, each making a presentation. The teacher sent them the presentation subjects via e-mail. Jamie, Marlo, Jimmy and Alex consider dividing the class into groups by gender. ",0.5667229294776917,198.0,0.07142857142857142,0.23076923076923078,0.10909090909090909,0.0,0.0,0.0,0.07142857142857142,0.23076923076923078,0.10909090909090909,10.46165065765381,8.892253351211547,7.454582333564758,6.753071467081706,6.038290324034514
 258,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Nora: John, are you at school?
 John: yes, maths",John is in the park. He is leaving now.,0.2526337802410126,47.0,0.1111111111111111,0.1,0.10526315789473685,0.0,0.0,0.0,0.1111111111111111,0.1,0.10526315789473685,7.932798385620117,7.462593078613281,6.525376001993815,6.041775703430176,5.746307373046875
-259,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,"There was a crowd outside the bookshop today. Cole Grant, who writes about vampires, was allegedly in the bookshop signing his books.",0.09047532081604,130.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.90761137008667,10.529474258422852,9.265653669834137,8.279336929321289,7.329340066228594
 260,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Debbie: Help, I don't know which dress to buy! The red",Debbie can't decide between buying a red dress and a green one. On Kelly and Denise's advice she will buy the green one. Kelly is considering buying the red one for herself.,0.7431232333183289,135.0,0.17647058823529413,0.46153846153846156,0.25531914893617025,0.06060606060606061,0.16666666666666666,0.08888888888888888,0.17647058823529413,0.46153846153846156,0.25531914893617025,11.89063294728597,8.670441286904472,7.26498573476618,6.420587380727132,5.719413669485795
 261,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
@@ -681,7 +668,6 @@ Emilia: Are you still angry?",Emilia is still angry.,0.7700796127319336,19.0,0.7
 262,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Mia: Could you help me buy a flight ticket?
 Rebecca:","Tom will help Mia buy a flight ticket as she doesn't have a credit card and doesn’t want to use Peter's now. Tom needs the flight, company and your personal data.",0.610768735408783,134.0,0.17647058823529413,0.5454545454545454,0.26666666666666666,0.09090909090909091,0.3,0.13953488372093023,0.14705882352941177,0.45454545454545453,0.22222222222222224,12.302639643351236,10.010046413966588,8.665838675065475,7.926793677466256,7.1342949602339
-263,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Hugh has a toothache and needs to go to the dentist. Andy and Wade recommend him dentists at ProDent. Hugh will call ProDent today.,0.1062498986721038,128.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,12.864062945048014,11.478938738505045,10.325618002149794,9.206915259361267,7.990527912974358
 264,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Ella: OMG! Just got a text from her mom!
 No","Before Christmas, Ella's mom won a hundred thousand in a lottery. Both Ella and Noah are excited.",0.3910855948925018,73.0,0.16666666666666666,0.2727272727272727,0.20689655172413793,0.0,0.0,0.0,0.1111111111111111,0.18181818181818182,0.13793103448275862,11.687890529632568,9.752779245376587,8.91444198290507,8.088652074337006,7.28707914352417
@@ -738,7 +724,6 @@ Dan: Hey guys, we're going out on a Saturday night. I'm","Dan,Tim, Chris and Mar
 285,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Casey: <file_photo>
 Amelia: these are so nice","Casey got a new nail polish and did her nails herself. It took her nearly 4 hours, so she won't do her friends' nails, as it takes too long.",0.2985792160034179,113.0,0.06666666666666667,0.2222222222222222,0.10256410256410256,0.0,0.0,0.0,0.06666666666666667,0.2222222222222222,0.10256410256410256,9.47945753733317,7.914140701293945,7.21258020401001,6.472612415041242,5.827405240800646
-286,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,"Sharol forgot about her sociology assignment. She needs to research feminist act, and it's due tomorrow. Kate has already finished it, and she rushes Sharol.",0.0443223901093006,154.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,15.84861691792806,13.481329600016275,11.3754638671875,10.139187812805176,8.747089133543128
 287,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Linda: Hi Helen, was Jamie at school today?
 Helen:","Jack had to miss school because he is sick. Jamie was sick a lot last year but he got better thanks to doctor Tornez at City Medical Centre, next to the mall. Linda learns the school trip has been cancelled as many students are sick.",0.464580774307251,193.0,0.1111111111111111,0.5,0.1818181818181818,0.0,0.0,0.0,0.06666666666666667,0.3,0.1090909090909091,11.923022985458374,9.939703517489964,8.882910796574183,7.952672908180638,7.170812676350276
@@ -839,7 +824,6 @@ Allison","Allison send Alan budget estimation for this year. Extra other expense
 323,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Liam: Hey, what's up?
 Nate: I'm free",Liam and Nate will meet spontaneously in 15 minutes.,0.5590282678604126,43.0,0.2222222222222222,0.2,0.2105263157894737,0.0,0.0,0.0,0.2222222222222222,0.2,0.2105263157894737,14.088689804077148,13.96505069732666,11.144041220347086,8.599274349212646,7.901326497395833
-324,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Carl will compete in championship this year. Duncan can't miss this event. Carl will register his family members as VIP.,0.2047538757324218,117.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.074531555175781,10.307387113571167,9.169812338692802,8.474705590142143,7.636104106903076
 325,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Dinny: Can you take your dog away before I come?
 Ter",Dinny's afraid of Terry's dog so he should keep it away.,0.5512623190879822,51.0,0.23076923076923078,0.25,0.24000000000000002,0.0,0.0,0.0,0.23076923076923078,0.25,0.24000000000000002,14.406611442565918,13.364275296529135,11.686588644981384,9.86337399482727,8.916831289018903
@@ -871,7 +855,6 @@ Betty: Hi,",Mom wants Betty to call the grandfather from time to time.,0.5393344
 336,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Whitney: What will be for dinner?
 William: Spaghetti alla","William is making spaghetti alla vongole for dinner. It's an Italian dish and it involves pasta, garlic, wine and clams.",0.5536941289901733,88.0,0.23809523809523808,0.5,0.3225806451612903,0.1,0.2222222222222222,0.13793103448275865,0.14285714285714285,0.3,0.19354838709677416,9.711342573165894,8.045033264160157,6.709193408489227,5.938533999703147,5.284505009651184
-337,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,"Maria suggests to meet after the IMF lecture to discuss the presentation which is due on Monday. Maria, Alexander, Martha and Sarah will meet tomorrow at 17:15. Lawrence will be late.",0.079983927309513,180.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.697867155075073,9.435789585113525,8.15830647945404,7.331781357526779,6.46913036108017
 338,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Molly: Listen, I've got a free ticket to the Muse concert in",Molly and Anna will go to the Muse concert in Cracow.,0.7254132032394409,44.0,0.5454545454545454,0.42857142857142855,0.4799999999999999,0.4,0.3076923076923077,0.34782608695652173,0.5454545454545454,0.42857142857142855,0.4799999999999999,13.96763801574707,12.829069137573242,10.31358015537262,9.439412021636963,8.29085636138916
 339,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
@@ -903,7 +886,6 @@ Lisa: Not yet
 Daisy:",Lisa isn't going home yet. Daisy wants her to be back before 11 p.m.,0.7816276550292969,52.0,0.3125,0.625,0.4166666666666667,0.13333333333333333,0.2857142857142857,0.18181818181818182,0.25,0.5,0.3333333333333333,13.93763256072998,10.430549263954163,8.461975653966268,7.298256039619446,6.519246530532837
 349,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Sophie: The bus is leaving in 3 minutes, are you coming",Tina will make it for the bus that is leaving in 3 minutes.,0.6251702308654785,41.0,0.5384615384615384,0.5833333333333334,0.5599999999999999,0.4166666666666667,0.45454545454545453,0.43478260869565216,0.5384615384615384,0.5833333333333334,0.5599999999999999,14.817052841186523,9.365342617034912,8.606293320655823,7.303881247838338,6.855110917772565
-350,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Sophie accepts some quince from Noah. Noah has left the quince in a basket on his terrace and the twins can pick it up any time. The twins are in college. Noah's son is in the military. He is still single but reportedly not gay.,0.0980506390333175,225.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.391866683959961,9.713601636886597,8.20571020245552,7.356143656231108,6.514712439643012
 351,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Harry: Going to Ikea, need anything?
 Sarah: Oh","Harry goes to Ikea. He will buy some furniture, frozen cake and a bag of meatballs for Sarah. Harry will use Sarah’s Ikea Family card.",0.7746731042861938,109.0,0.15384615384615385,0.4444444444444444,0.2285714285714286,0.04,0.125,0.06060606060606061,0.15384615384615385,0.4444444444444444,0.2285714285714286,14.269742012023926,11.050415311540876,10.025905323028564,8.678822926112584,7.524067401885986
@@ -936,7 +918,6 @@ Max: She",Max's sister is studying in Shanghai and she already speaks Chinese. S
 362,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 David: Morning Russ. Have you seen the report I sent yesterday?
 Russ",Russ received David's report but hasn't read it yet.,0.773845911026001,58.0,0.2727272727272727,0.23076923076923078,0.24999999999999994,0.0,0.0,0.0,0.18181818181818182,0.15384615384615385,0.16666666666666669,11.110074043273926,11.058952808380127,9.920775413513184,9.262986302375793,8.669601726531983
-363,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Ben won't go with Catherine to visit uncle Steve. He will visit her and the boys. ,0.0776504725217819,79.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,12.144282341003418,11.35640557607015,9.395972442626952,8.124528067452568,7.276471349928114
 364,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 The class room is waiting for you.","Kaya is looking for Clay, who is in the classroom.",0.4174959361553192,35.0,0.3,0.375,0.33333333333333326,0.0,0.0,0.0,0.2,0.25,0.22222222222222224,16.37904167175293,15.01096487045288,12.535354932149252,11.220550298690796,8.75437601407369
 365,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
@@ -1128,7 +1109,6 @@ Adelina: Hi handsome. Where you you come from?
 Cypri",Cyprien irritates Adelina by giving too many responses.,0.4837304055690765,51.0,0.125,0.1,0.11111111111111112,0.0,0.0,0.0,0.125,0.1,0.11111111111111112,14.44685173034668,13.204896926879883,12.15061092376709,10.91938076019287,10.371151685714722
 436,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Joanna: I need to get the coffie stains out of my dress.",Joanna got her dress stained. Ethel recommends her dry-cleaner at Jagielonska 3. ,0.6893399953842163,65.0,0.23076923076923078,0.23076923076923078,0.23076923076923078,0.0,0.0,0.0,0.15384615384615385,0.15384615384615385,0.15384615384615385,14.364315509796143,13.308408975601196,12.335920492808023,10.966252115037706,10.155455762689764
-437,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,"Anna proposes Charlie eating a pizza tonight. Charlie refuses, because he is upset about the things that happened.",0.1230969950556755,111.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,13.260426044464111,11.253575801849365,9.546903530756632,8.508833169937134,7.577504634857178
 438,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Kris: Why is it so cold outside?
 Ovi: I'm",A lot of sick people go to Nadine's clinic because of the cold weather.,0.3524819612503052,60.0,0.06666666666666667,0.09090909090909091,0.07692307692307691,0.0,0.0,0.0,0.06666666666666667,0.09090909090909091,0.07692307692307691,16.716007232666016,13.211249033610025,11.21937346458435,8.95668355623881,7.486672610044479
@@ -1148,7 +1128,6 @@ Lucy: Have you thrown the garbage out?
 Levy: I thought",Levy hasn't taken the trash out because parents didn't ask him. Lucy will do it.,0.7120288610458374,64.0,0.23529411764705882,0.36363636363636365,0.2857142857142857,0.0,0.0,0.0,0.11764705882352941,0.18181818181818182,0.14285714285714285,10.182439804077148,9.757901827494303,8.911041736602783,7.8704744066510886,7.2075610690646705
 444,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Willy: Your car is fantastic! No, but seriously, I've always",Willy and Vinny will car pool with Winny's red Mustang.,0.3526313006877899,53.0,0.18181818181818182,0.16666666666666666,0.17391304347826086,0.0,0.0,0.0,0.18181818181818182,0.16666666666666666,0.17391304347826086,13.888473510742188,11.925164222717285,11.264071702957153,9.666515747706095,8.627788603305817
-445,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,"Sage is having a beer. Lindsey has just finished her class but is not going to the next one. Just like last week, Lindsey has asked a classmate to fake her signature on the attendance list.",0.1637399494647979,186.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.745179653167725,9.310434103012085,8.091968139012655,7.1612516939640045,6.277888559159779
 446,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Jason: I'm doing some video work for the weekend. I'm staying",Jason wants to meet Dory over the weekend. Dory's friend is going to stay with her for a week. Jason has been working on a movie with Lucy for the past two months. Jason bought a video-creator app.,0.5434866547584534,154.0,0.175,0.5,0.25925925925925924,0.05128205128205128,0.15384615384615385,0.07692307692307693,0.1,0.2857142857142857,0.14814814814814817,10.558833122253418,8.311615996890598,7.089255162647793,6.342291527324253,5.621199410894643
 447,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
@@ -1206,7 +1185,6 @@ Derek McCarthy: I'm in Poland, but I can ring my wife",Derek McCarthy will pick 
 468,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Derek: Judy, r you leaving for the weekend?
 Judy",Judy is staying for the weekend. Derek asks Judy to feed his animals on Friday and Saturday. Judy agrees. Derek will give her his keys on Thursday and provide Judy with details.,0.7526397705078125,139.0,0.1875,0.6,0.2857142857142857,0.06451612903225806,0.2222222222222222,0.09999999999999999,0.15625,0.5,0.23809523809523808,9.55739688873291,8.305646623883929,7.278378486633301,6.511836417516073,5.863451807122481
-469,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,"Laura, Kelsey, Oona and Sid are going to see ""Aquaman"" on Thursday at 8:10 pm. Oona will get the tickets.",0.1119149252772331,102.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.222556114196777,9.243900775909424,7.619806337356567,6.8451511309697075,6.034732524086447
 470,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Rob: I'm excited to start the Get off the couch challenge! Who's",Rob wants to start doing 30 minutes of physical activity every day. Greg is already doing 60 minutes. Anna wants to start exercising just like Rob. ,0.3647005558013916,116.0,0.11538461538461539,0.2,0.14634146341463417,0.04,0.07142857142857142,0.05128205128205128,0.11538461538461539,0.2,0.14634146341463417,12.25218391418457,9.881432135899862,8.213915877872044,6.817298302283654,6.089871019124985
 471,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
@@ -1329,7 +1307,6 @@ Caron: Yes",Rachel and Caron are getting drinks in Red Lion at 8 tonight.,0.6631
 514,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Sara: Hey, are you free this Saturday?
 Sara: I",Victor cannot help Sara with the event they're organizing as he's busy this Saturday.,0.3074696063995361,64.0,0.1875,0.3,0.23076923076923075,0.06666666666666667,0.1111111111111111,0.08333333333333334,0.1875,0.3,0.23076923076923075,11.268190383911133,10.01604143778483,9.294761180877686,8.206259489059448,7.298383176326752
-515,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,"Mike and Dave notice Wendy got prettier. Dave wants to hit on her, but she's with Jerry. He'll try anyway.",0.2173312902450561,103.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,12.951147079467773,10.975226020812988,9.583998143672943,8.546002994884144,7.603696141924177
 516,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Patricia: Hey, could you give me a call in an hour or so",Patricia cannot talk now. George will call her in about an hour.,0.5217549204826355,46.0,0.4166666666666667,0.35714285714285715,0.3846153846153846,0.09090909090909091,0.07692307692307693,0.08333333333333334,0.4166666666666667,0.35714285714285715,0.3846153846153846,15.950706481933594,13.902075290679932,11.269007921218872,10.169994640350343,8.671766213008336
 517,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
@@ -1415,7 +1392,6 @@ Blake is coming to the party. George is comin'!",George is coming to a meeting w
 Steve bought the new Dream Theater album 5 minutes ago. He hopes it","Steve and Rob will talk about new Dream Theater album, after they finish listening.",0.7288032174110413,51.0,0.35714285714285715,0.35714285714285715,0.35714285714285715,0.23076923076923078,0.23076923076923078,0.23076923076923078,0.35714285714285715,0.35714285714285715,0.35714285714285715,12.628299713134766,10.733627637227377,10.044192552566528,8.96960703531901,8.270375967025757
 549,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Alex: Hi, I'm Alex, and I'm here to help you with",Martin will get Alex two bottles of milk after he finishes the project.,0.3569929301738739,53.0,0.07692307692307693,0.07142857142857142,0.07407407407407408,0.0,0.0,0.0,0.07692307692307693,0.07142857142857142,0.07407407407407408,9.725335121154785,9.60988712310791,9.016298611958822,8.190236377716065,7.889854272206624
-550,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Hansel will tell his sis to text Jeremih back.,0.0975073799490928,44.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,15.309840202331543,14.5622239112854,11.696918725967407,10.80536184310913,9.3843994140625
 551,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Peter: Can you send me the link of your beauty shop?
 Joy",Joy sent Peter the link to her beauty shop.,0.8265092968940735,34.0,0.6666666666666666,0.46153846153846156,0.5454545454545455,0.25,0.16666666666666666,0.2,0.5555555555555556,0.38461538461538464,0.4545454545454546,14.346839904785156,13.178022861480713,12.412585576375326,11.842126846313477,11.251466751098633
@@ -1469,7 +1445,6 @@ Ty: Do you speak French?
 Veronica: No, I need",Ty needs a translator. Veronica doesn't speak French.,0.8242783546447754,47.0,0.5555555555555556,0.5,0.5263157894736842,0.125,0.1111111111111111,0.11764705882352941,0.3333333333333333,0.3,0.3157894736842105,10.653645515441895,10.367843627929688,10.164655367533365,9.05611789226532,7.089928547541301
 570,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Emily: ""I'm waiting to see my doctor and you won't believe who",Emily is at a doctor's office. There is a nun and a blind crazy man waiting as well.,0.6434420347213745,68.0,0.21052631578947367,0.26666666666666666,0.23529411764705882,0.0,0.0,0.0,0.15789473684210525,0.2,0.17647058823529413,14.165009498596191,11.075350522994995,9.500863313674927,8.367030024528503,7.427772140502929
-571,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Frank will help Sarah and Mary transport the aquarium that is a gift for someone.,0.1099820807576179,78.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.279787063598633,10.290122667948404,9.711643695831299,8.694955984751383,8.377890518733434
 572,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Mario: I heard you were out.
 Conor: Yes, I","Mario wants Conor to bring him a bucket of fries from KFC as the latter one is out, and Mario will pay for it himself. ",0.5492895841598511,94.0,0.12,0.3,0.17142857142857143,0.0,0.0,0.0,0.08,0.2,0.11428571428571428,11.779689153035482,10.026345491409302,8.581001864539253,7.658860683441162,7.012984848022461
@@ -1645,7 +1620,6 @@ Sam: I'm going to school now. I'm going to leave school for","Tilly was supposed
 635,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Mell: Hi there! How are you doing?
 Gloria:","Gloria and Mell plan to have a barbeque at Mell's place on Saturday. They are happy, because Tad's sister moved to Scotland. Mell needs Gloria's advice on garden design.",0.4152968525886535,137.0,0.09375,0.3333333333333333,0.14634146341463417,0.0,0.0,0.0,0.09375,0.3333333333333333,0.14634146341463417,14.1786949634552,11.61314582824707,10.032286405563354,8.822948455810547,7.881793439388275
-636,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Hailey hasn't been to I-max cinema yet and Whitney wants to take her to one to watch Aquaman. Hailey'll do everything to find some time for it. Whitney informs Hailey that Shadrack and his girlfriend are going with them.,0.0618144422769546,217.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,12.92890453338623,10.909775638580323,9.163264592488607,8.06069860458374,7.305969104766846
 637,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 George: What have you gotten for Christmas?
 Jacob: I got a punch","Jacob, Jenny and George are telling each other what they have gotten for Christmas.",0.7227754592895508,64.0,0.5,0.5384615384615384,0.5185185185185186,0.15384615384615385,0.16666666666666666,0.16,0.42857142857142855,0.46153846153846156,0.4444444444444445,8.030075073242188,7.236889998118083,6.902587056159973,6.017043431599935,5.641245365142822
@@ -1671,7 +1645,6 @@ Cristina: Hey, do you think we can meet up next week to",Gaya and Cristina are g
 Matt: No way!
 Phil: Where, when?
 Matt:",Matt and Tony want to go to the concert of Bon Jovi next July in Poland and are planning to buy the tickets that cost 250 PLN before they’re sold out. Phil will think about it and let them know.,0.353266179561615,169.0,0.04878048780487805,0.25,0.0816326530612245,0.0,0.0,0.0,0.04878048780487805,0.25,0.0816326530612245,9.219614267349243,8.346413718329536,7.446018934249878,6.656446406715794,6.052166809638341
-646,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Dan cooked a successful BBQ meal and will split the bill via Splitwise. He invites everyone who did not eat to remove themselves. ,0.1646927297115326,127.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,12.801732540130615,10.598577117919922,9.465487778186798,8.821100664138793,7.926558567927434
 647,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Camila: So Harper, what are your plans for tonight?
 Harper",Camila and Harper agreed to order a meal and watch a movie tonight.,0.6129577159881592,51.0,0.23076923076923078,0.2727272727272727,0.24999999999999994,0.0,0.0,0.0,0.23076923076923078,0.2727272727272727,0.24999999999999994,16.738433837890625,14.533715724945068,12.24489688873291,10.891437530517578,9.011799335479736
@@ -1690,7 +1663,6 @@ Andrea: Hi, Pat, I can't come to work today.
 652,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Phil: Hi. Are you home?
 Nancy: Yes. Where are",It took Phil a very long time to do the Christmas shopping but he probably managed to get everything. He will be home in an hour. Phil's apple pie will be in the oven when he arrives.,0.3669250607490539,152.0,0.05263157894736842,0.2,0.08333333333333333,0.0,0.0,0.0,0.05263157894736842,0.2,0.08333333333333333,10.037099838256836,8.10175734758377,7.0072537660598755,6.266049265861511,5.573073852062225
-653,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Piper will get paid tonight. Client liked Piper's work and wants to work with her on a long-term basis.,0.1185262873768806,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,13.904839038848877,11.709941101074218,10.130437237875801,8.495877552032471,7.701003114382426
 654,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Richie: Pogba
 Clay: Pogboom
@@ -1748,7 +1720,6 @@ Paula: Why do they make this game with hard levels?
 Stew",Paula cannot get past level 637 in her game. She will look up the cheats online. ,0.5203630924224854,60.0,0.1875,0.25,0.21428571428571427,0.0,0.0,0.0,0.125,0.16666666666666666,0.14285714285714288,12.640549182891846,11.074403285980225,10.00392452875773,8.623830742306179,8.009716467423873
 673,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Calum: Oh, please. There's an ad coming up to be a",Calum and Bethany doubt you can earn 80 thousands as a computer investigator. Calum and Bethany can't imagine taking to customers all day.,0.4412944614887237,106.0,0.125,0.23076923076923078,0.16216216216216217,0.0,0.0,0.0,0.08333333333333333,0.15384615384615385,0.10810810810810811,13.227483113606771,11.471574147542318,10.000355084737143,9.022037426630655,8.34597225189209
-674,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,,Jackie's sister is pregnant two years before she planned for it. Jackie is worried about her financial situation.,0.0873098000884056,110.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.856848239898682,9.663102626800537,8.493820349375406,7.590681612491608,6.75258355140686
 675,HuggingFaceTB/SmolLM2-135M-Instruct,Summarize the following text: ,Samsum,"assistant
 Mike: Who's going to the lecture tomorrow morning?
 Sean:",Sean never gets up for the morning lecture. He needs to attend it at least once to get the notes.,0.6588863730430603,77.0,0.25,0.45454545454545453,0.3225806451612903,0.0,0.0,0.0,0.1,0.18181818181818182,0.12903225806451613,9.30732250213623,8.813772201538086,7.90635363260905,7.152372717857361,6.331852934577248

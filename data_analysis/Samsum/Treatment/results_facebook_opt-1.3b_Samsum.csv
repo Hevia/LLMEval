@@ -52,7 +52,6 @@ Marshall: <file_gif>
 Ethan: <file_gif>
 Scott","Ethan, Toby and Marshall are making fun of Scott.",0.5947916507720947,40.0,0.3333333333333333,0.42857142857142855,0.375,0.0,0.0,0.0,0.2222222222222222,0.2857142857142857,0.25,9.86461353302002,9.018132209777832,8.045111974080404,7.552438020706177,6.840936263402303
 17,facebook/opt-1.3b,Summarize the following text: ,Samsum,                    ,Igor has a lot of work on his notice period and he feels demotivated. John thinks he should do what he has to do nevertheless. ,0.1950464397668838,107.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.745283444722494,10.14688507715861,8.424023999108208,7.274229188760121,6.479991674423218
-18,facebook/opt-1.3b,Summarize the following text: ,Samsum,,Clara is rewatching Dear White People and strongly recommends it to Neela.,0.0969450622797012,71.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,12.40510368347168,10.691479365030924,10.335276126861572,8.843790849049887,7.620078891515732
 19,facebook/opt-1.3b,Summarize the following text: ,Samsum,"
 Ernest: lol
 Mike: lol
@@ -179,7 +178,6 @@ Abig",Abigail is not going to take a stroll with the little ones. Her smog alert
 Jenny: Thank you so much!
 Mary: You're welcome :)
 Jenny:",Jenny has left her credit car at the Mary's shop.,0.384118914604187,43.0,0.18181818181818182,0.2,0.1904761904761905,0.0,0.0,0.0,0.18181818181818182,0.2,0.1904761904761905,9.647298812866211,8.918570518493652,8.485988140106201,7.61940279006958,7.183727343877156
-58,facebook/opt-1.3b,Summarize the following text: ,Samsum,,It's Tom's birthday. Lara and Gary will come to Tom's place about 5 pm to prepare everything before Tom gets back home at 5:30. Gary has already paid for the cake - Lara will pick it up and she will also get the balloons. ,0.0877220705151557,219.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.2291690826416,7.368539762496948,6.339067220687866,5.625853118442354,5.2101439237594604
 59,facebook/opt-1.3b,Summarize the following text: ,Samsum,"20439
 Paul: I am. 20439
 Laura: I am not.20439
@@ -431,7 +429,6 @@ I'm not sure if this is a good idea. I mean, I'm not",Kelvin and the other class
 135,facebook/opt-1.3b,Summarize the following text: ,Samsum,"
 Linda: @Amanda are you ok with pasta for lunch?
 Amanda: sure","Karen wants something cheaper than sushi for lunch. Linda, Ronnie and Karen will get takeout pasta boxes to the park.",0.4929178953170776,93.0,0.2,0.36363636363636365,0.25806451612903225,0.05263157894736842,0.1,0.06896551724137931,0.1,0.18181818181818182,0.12903225806451613,10.57796573638916,9.429045677185059,8.990596907479423,8.067602300643921,7.5936126708984375
-136,facebook/opt-1.3b,Summarize the following text: ,Samsum,,Marty thinks she has sprained her ankle. Marty wants to go to the doctor tomorrow. Christine will pick up Marcel from school today. Tomorrow Christine will take Marcel to school and Marty to the doctor. Marty will call the school. Christine and Marty will meet around 4. ,0.1360066086053848,268.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.693049907684326,7.855645526539195,6.7729421108961105,5.871043649586764,5.132372779505594
 137,facebook/opt-1.3b,Summarize the following text: ,Samsum,"
 Cameron: I will try to come home as soon as possible.
 Peyton:",Peyton is expecting Cameron to bring the video game. Cameron will probably be out for another week.,0.6939442753791809,74.0,0.23529411764705882,0.3333333333333333,0.27586206896551724,0.0,0.0,0.0,0.11764705882352941,0.16666666666666666,0.13793103448275862,10.185383319854736,8.57925271987915,7.599797169367473,6.88054233789444,6.293162274360657
@@ -547,7 +544,6 @@ Shelly: I'm doing a lot of volunteering this year. I'm going to be a","Shelly is
 I'm not sure what you're trying to say here.
 
 ",Jim will check out Max's latest music project when he gets home.,0.0296790618449449,51.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.361408233642578,9.18473768234253,8.3045494556427,7.784070205688477,6.975738116673061
-175,facebook/opt-1.3b,Summarize the following text: ,Samsum,,Kane recommends the new 30 Seconds to Mars album to Shannon.,0.0627987906336784,57.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.07266616821289,10.768564224243164,9.787307103474935,8.202832221984863,7.6707383791605634
 176,facebook/opt-1.3b,Summarize the following text: ,Samsum,"
 Paul: See you.
 
@@ -631,7 +627,6 @@ Kate: I'm glad you enjoyed yourself. I'm glad you had a good time.
 
 I'm not sure if this is the right place to ask this, but I'm looking",Sam wants to buy a custom dress as a surprise for his wife. It should be black and elegant. The store employee sent him some pictures for reference. Sam decided on the features he likes. His product number is 898998 and he will place the order on the company's website.,0.1219813600182533,223.0,0.0784313725490196,0.23529411764705882,0.11764705882352941,0.0,0.0,0.0,0.0392156862745098,0.11764705882352941,0.058823529411764705,9.10484733581543,7.944340272383257,7.017804566551657,6.3897736901822295,5.715543648292279
 205,facebook/opt-1.3b,Summarize the following text: ,Samsum, I'm not either. I'm not a big fan of the camera. I prefer to take pictures,Kamden hasn't used social media recently. He uses messenger only and wants to get Mckinley's photographs.,0.2668605148792267,79.0,0.05555555555555555,0.05555555555555555,0.05555555555555555,0.0,0.0,0.0,0.05555555555555555,0.05555555555555555,0.05555555555555555,9.77688455581665,8.468573474884034,7.934815951756069,7.319035863876342,7.020734588305156
-206,facebook/opt-1.3b,Summarize the following text: ,Samsum,,"After work, Mike is going to go to the gym and then home. He invites Jason to bring some food and come over. They can play 2 on ps4.",0.1827249377965927,129.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.934322992960611,8.641039371490479,7.369788694381714,6.5973373009608345,5.738450625363519
 207,facebook/opt-1.3b,Summarize the following text: ,Samsum,"!!!
 Linda: I'll be there in a few days!
 Daisy: I'll",Linda got a new job and is moving to Ohio for 6 months. Her brother will stay at her current apartment. Daisy will come by Linda's place to meet her and help her pack as she is too busy to go out.,0.683530330657959,169.0,0.06976744186046512,0.25,0.10909090909090909,0.0,0.0,0.0,0.06976744186046512,0.25,0.10909090909090909,8.175138473510742,6.724062972598606,5.999090739658901,5.510755684640673,4.975771499716717
@@ -674,7 +669,6 @@ Dominic: I",People are photoshopping Timothée Chalamet into artworks. Dominic a
 221,facebook/opt-1.3b,Summarize the following text: ,Samsum,"
 Julia: I'll buy you a new one, don't make a drama ̶
 ","Julia broke Tom's cup, which made him sad. She will buy him a new one.",0.6029802560806274,53.0,0.3125,0.38461538461538464,0.3448275862068966,0.13333333333333333,0.16666666666666666,0.14814814814814814,0.3125,0.38461538461538464,0.3448275862068966,11.424245834350586,10.51177453994751,9.184290091196695,7.861301481723785,6.908846521377564
-222,facebook/opt-1.3b,Summarize the following text: ,Samsum,,"The CSS tests for the hockey players are today and will last 3 hours, starting 5pm. Hank will bring his son and Don's son as well. Don is glad.",0.133909523487091,140.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.372834205627441,10.020964077540807,9.035092306137084,7.9299702644348145,7.347801348742316
 223,facebook/opt-1.3b,Summarize the following text: ,Samsum,                    ,"Jessica bought a table, six chairs, a vase and a pile of clothes and the second hand shop downtown. She paid 70 euros for everything. ",0.1091300547122955,114.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.79198932647705,8.57040294011434,7.742644415961371,7.055142839749654,6.345355049769084
 224,facebook/opt-1.3b,Summarize the following text: ,Samsum,"20439
 Damien: I'll be there.20439
@@ -742,7 +736,6 @@ Aimee: I",Aimee is looking for Maryam.,0.5977892279624939,43.0,0.4,0.16666666666
 George: I'll see you there!
 
 I'm not sure if this is a good","George, Robert and Paul are going to play basketball on Friday at 7. Yousuf will be late.",0.298875093460083,66.0,0.058823529411764705,0.06666666666666667,0.0625,0.0,0.0,0.0,0.058823529411764705,0.06666666666666667,0.0625,9.077197074890137,8.333658456802368,7.550852537155151,6.990661561489105,6.3171233263882725
-243,facebook/opt-1.3b,Summarize the following text: ,Samsum,,"Rory wants Mitch to take Bill and Sammy and they'll chip in for gas. Mitch will be leaving Sunday, the 29th to get there by 9 am on Monday. Bill will arrive around 10 am Sunday and Joanna will be picking him. Mitch will meet Bill after.",0.1364630609750747,233.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.339529418945313,8.498434110121293,7.542674481868744,6.735969153317538,6.125622996262142
 244,facebook/opt-1.3b,Summarize the following text: ,Samsum,". I'll see you then.
 Jones: Okay. I will see you then.
 
@@ -808,7 +801,6 @@ I'm not sure if this is a good idea,",Hugh has a toothache and needs to go to th
 Noah: I'm gonna go get a drink!
 Ella: I'll be right","Before Christmas, Ella's mom won a hundred thousand in a lottery. Both Ella and Noah are excited.",0.4887846708297729,72.0,0.16666666666666666,0.23076923076923078,0.1935483870967742,0.0,0.0,0.0,0.1111111111111111,0.15384615384615385,0.12903225806451615,9.310505867004395,8.663874626159668,8.268561442693075,7.279508776134914,6.394090934233232
 265,facebook/opt-1.3b,Summarize the following text: ,Samsum, Allaah bless you  Allaah bless you  Allaah bless you  Allaah bless you  Allaah bless you ,"There has been an accident on Circle Drive, neat Circle Mall. There are no fatalities.",-0.1002320647239685,75.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,14.01801872253418,10.501807053883871,8.539252471923827,7.341943332127163,6.589616907967462
-266,facebook/opt-1.3b,Summarize the following text: ,Samsum,,Rob and Bob are watching the game. Bob will run some errands on the weekend. Jim's birthday is next Wednesday. He might organize a meetup this weekend. Bob will see Rob on the weekend.,0.1773271411657333,181.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.853379607200623,7.108483672142029,6.571457425753276,6.127187520265579,5.693935019629342
 267,facebook/opt-1.3b,Summarize the following text: ,Samsum," people, but we have a few people who are coming from out of town
 Debra: oh","Julie and Debra are discussing the event, there will be about 20 people, mostly girls from the village 40+.",0.5812169313430786,82.0,0.21052631578947367,0.25,0.22857142857142856,0.0,0.0,0.0,0.10526315789473684,0.125,0.11428571428571428,10.629242897033691,9.625615239143372,8.477848393576485,7.937413109673394,7.032526294390361
 268,facebook/opt-1.3b,Summarize the following text: ,Samsum,".
@@ -921,7 +913,6 @@ Bill: I know, I know. I’m sorry. I’m going","Del accused Stanley of having a
 Laura: You're welcome :) awaru
 
 Laura: Hi Kim :) Allaah is the",Kimberly might have left her umbrella she got from her mother at the cafe yesterday. Laura gives her the cafe's phone number to check with the staff.,0.3203427195549011,117.0,0.07142857142857142,0.16666666666666666,0.1,0.0,0.0,0.0,0.07142857142857142,0.16666666666666666,0.1,10.68113644917806,9.488651116689047,8.464654763539633,7.502801537513733,6.4397875517606735
-304,facebook/opt-1.3b,Summarize the following text: ,Samsum,,Catherine applied for an accounting position at Pandora. Jake has been working there for 5 years. This job offers a clear career path and benefits. Jake got promoted twice with salary increase. Catherine will have an interview on Monday.,0.0921627432107925,234.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.48078167438507,8.002659426795113,7.049052715301514,6.272921323776245,5.765639868649569
 305,facebook/opt-1.3b,Summarize the following text: ,Samsum,  Allaah will help me  Allaah will help me  Allaah will help me  Allaah will help me,Anna will go with Fiona to a doctor tomorrow at 8 a.m.,0.2082906514406204,63.0,0.07692307692307693,0.0625,0.06896551724137931,0.0,0.0,0.0,0.07692307692307693,0.0625,0.06896551724137931,9.900802612304688,8.614206631978353,7.937539577484131,6.895308017730713,6.503709861210415
 306,facebook/opt-1.3b,Summarize the following text: ,Samsum,"
 
@@ -1129,7 +1120,6 @@ Sandra: Bye bye, Stella!
 Sandra: Bye bye, Stella","Stella doesn't want to visit Sandra because she doesn't want to get infected by Sandra's disease. Sandra's doctor prescribed her effective medicines, so she will be fine soon. Stella wants to take Sandra to the cinema for some action movie when she recovers.",0.5954649448394775,221.0,0.0851063829787234,0.4444444444444444,0.14285714285714285,0.0,0.0,0.0,0.0851063829787234,0.4444444444444444,0.14285714285714285,8.57298755645752,7.350137424468994,6.442577743530274,5.718344116210938,5.082221673085139
 375,facebook/opt-1.3b,Summarize the following text: ,Samsum,"  exting
 Harley: I'm not saying she's a bad person, just that she's",Harley and Ruby are discussing the divorce filing. Harley and Ruby agree there are always two sides.,0.4476448893547058,75.0,0.058823529411764705,0.06666666666666667,0.0625,0.0,0.0,0.0,0.058823529411764705,0.06666666666666667,0.0625,9.205474376678467,8.842421770095825,7.8311231931050616,7.169271111488342,6.657601833343506
-376,facebook/opt-1.3b,Summarize the following text: ,Samsum,,Ken feels stressed because of work and fighting with Brad. There is also too much going on at mom's. Ken is going to a show on Saturday night. On Sunday Ken is seeing the grandkids at the zoo.,0.1479936987161636,189.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.722093343734741,9.081459820270538,7.716705432304969,6.764709458631628,5.934641523794695
 377,facebook/opt-1.3b,Summarize the following text: ,Samsum,", i'll be supporting city
 Julius: cool, i'll be supporting city
 Titus",It's derby day today. Titus supports Manchester United. Julius supports City.,0.684734046459198,61.0,0.4166666666666667,0.38461538461538464,0.4,0.09090909090909091,0.08333333333333333,0.08695652173913043,0.3333333333333333,0.3076923076923077,0.32,14.238698959350586,12.667152086893717,12.122192859649658,9.479474902153015,8.65594560759408
@@ -1500,7 +1490,6 @@ Helen: ok, i will",Helen has left her laptop at home and needs it for the presen
 494,facebook/opt-1.3b,Summarize the following text: ,Samsum,"
 
 I'm not sure if this is a joke or not, but I'm not sure if",Jessica's plant is withering. She doesn't know what plant it is. Boston found it out using Google Images.,0.1648286879062652,79.0,0.05,0.058823529411764705,0.05405405405405405,0.0,0.0,0.0,0.05,0.058823529411764705,0.05405405405405405,11.605190753936768,10.392461776733398,9.102607590811592,8.151507430606419,6.994987348715465
-495,facebook/opt-1.3b,Summarize the following text: ,Samsum,,"John and Annie are moving to London because he lost his job in Germany and found a better offer working in IT here. Annie isn't happy with the move. Amber, who was supposed to stay in their London flat for 5 years, has to move. Erin offers her place but Amber plans on staying with John and Annie.",0.0412483066320419,294.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.358433246612549,6.96776610154372,6.279277023516204,5.642200442460867,5.167541585862637
 496,facebook/opt-1.3b,Summarize the following text: ,Samsum,"!
 Audrey: I'm here!
 Audrey: I'm here!
@@ -1704,7 +1693,6 @@ I think he's",Andy is going to work late so he won't see Sue before 8.,0.1106453
 Stewart: I'm going to go out on a limb here and say that the",Stewart and Shari find the current president ignorant and incompetent. They hope he gets voted out. Stewart is going to see what possibilities there are of volunteering in the upcoming elections.,0.6023646593093872,155.0,0.1935483870967742,0.4,0.26086956521739135,0.03333333333333333,0.07142857142857142,0.045454545454545456,0.12903225806451613,0.26666666666666666,0.17391304347826086,10.039106369018555,8.937823227473668,7.9885414123535154,7.05068234034947,6.306875281863743
 555,facebook/opt-1.3b,Summarize the following text: ,Samsum, I'm sure of it. I'm going to tell him. I'm going to tell him that,Lydia has exchanged sexual messages with him. Lydia does not feel like pursuing the affair because he is engaged. Lydia will have a word with him because what he is doing is unfair.,0.270722895860672,144.0,0.06060606060606061,0.1111111111111111,0.0784313725490196,0.0,0.0,0.0,0.06060606060606061,0.1111111111111111,0.0784313725490196,9.020780881245932,7.256691115243094,6.4187655015425245,6.038894585200718,5.6034767627716064
 556,facebook/opt-1.3b,Summarize the following text: ,Samsum,                    ,Daria has a new job at a law firm.,0.081818863749504,26.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.804084777832031,6.436820983886719,5.916389465332031,5.60364556312561,5.409065628051758
-557,facebook/opt-1.3b,Summarize the following text: ,Samsum,,"On the following week, Sarah will get her time off from Monday to Wednesday.",0.0310503393411636,73.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.81296157836914,8.524870236714682,8.36072313785553,7.500750303268433,6.814751088619232
 558,facebook/opt-1.3b,Summarize the following text: ,Samsum,"
 
 I'm not sure if this is a joke or not, but I'm going to assume",Blair and Chuck are going to meet the wedding planner after work at Nonna Rita's. The tagliatelle served at Nonna Rita's are very good.,0.1212797984480857,102.0,0.07692307692307693,0.11764705882352941,0.0930232558139535,0.04,0.0625,0.048780487804878044,0.07692307692307693,0.11764705882352941,0.0930232558139535,9.798735618591309,8.865572770436605,7.8158832550048825,7.1360410910386305,6.447277854470646
@@ -1906,11 +1894,9 @@ Alice: I will be there at",Alice's dad is coming over for a month to decorate Jo
 623,facebook/opt-1.3b,Summarize the following text: ,Samsum," I'm going to write it down!
 Kelly: I'm going to write it down!
 ",The scariest place for Jessica was the Capuchin Catacombs in Palermo.,0.1627766191959381,59.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.06828498840332,9.941826820373535,8.295101261138916,7.18401438849313,6.207202725940281
-624,facebook/opt-1.3b,Summarize the following text: ,Samsum,,Maria wants to work as a freelancer. Spencer is an artist. The agency and social media help him to get new clients. He earns around £1000 a month. Spencer encourages Maria to develop her talent and to try freelancing.,0.0593122579157352,214.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.695121049880981,7.967493269178602,7.0125680310385565,6.368306967947218,5.710493626801864
 625,facebook/opt-1.3b,Summarize the following text: ,Samsum,"
 Joe: And if you want to bring some games - I'm sure there are some people who",Tim wants to organise a board games night for his colleagues. Joe has some good ideas and tips on where to start. ,0.4991523921489715,85.0,0.2727272727272727,0.35294117647058826,0.30769230769230765,0.047619047619047616,0.0625,0.05405405405405405,0.18181818181818182,0.23529411764705882,0.20512820512820512,9.644301414489746,8.861109828948974,8.221321310315814,7.318364143371582,6.783526261647542
 626,facebook/opt-1.3b,Summarize the following text: ,Samsum,                    ,"Richard's, Holy's and Anne's project is due on December 15. Anne and Richard are meeting tomorrow at Starbucks down 8th street at 3pm. Holy's out of town, but she'll do some research tonight and send it to them.",0.0459725894033908,191.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.776562690734863,8.742149877548218,7.681987190246582,6.775174832344055,6.0831019306182865
-627,facebook/opt-1.3b,Summarize the following text: ,Samsum,,Gurdun has the flu. He is feeling better. Gurdun hopes he'll be back at the uni on Wednesday. Russ and his team won the last match. ,0.04279700294137,129.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.849482854207357,8.396092210497175,7.300337964838201,6.6488478524344305,5.9146021074718895
 628,facebook/opt-1.3b,Summarize the following text: ,Samsum,DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD,"Leo, Charlie and Oliver are watching a video with a bizarre prank. Charlie has ambivalent feelings. Leo and Oliver enjoy the video's weirdness very much especially moments 3:24 and 5:24.",0.0997784286737442,186.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.016003847122192,8.826426327228546,7.823586622873942,7.009218126535416,6.201301461174374
 629,facebook/opt-1.3b,Summarize the following text: ,Samsum,"
 Thessalia: Amen.
@@ -2301,7 +2287,6 @@ Zoe: :-* Allaah
 Frank: :-* Allaah
 Zoe: :",Franks tells Zoe he loves her.,0.5217407941818237,35.0,0.3333333333333333,0.4,0.3636363636363636,0.0,0.0,0.0,0.3333333333333333,0.4,0.3636363636363636,,11.843267440795898,10.434479713439941,9.90061887105306,8.398347437381744
 747,facebook/opt-1.3b,Summarize the following text: ,Samsum,awaru!awaru!awaru!awaru!awaru!awaru!awaru!awaru!awaru!awaru!,"Josie finds Eco's novel ""Foucault's Pendulum"" nerdy. Josie would like to read Eco in Italian, but she's unsure of her language abilities. Stefano considers Eco's two novels and finds them difficult. Josie has read an unfavorable review of ""Foucault's Pendulum"" by Salman Rushdie.",-0.0094735352322459,252.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.566406386239189,8.669609716960363,7.405551774161203,6.440515322344644,5.539197550879584
-748,facebook/opt-1.3b,Summarize the following text: ,Samsum,,"Evan can't come to his lesson tomorrow, because he's got the flu.",0.1326627284288406,62.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.730220794677734,7.848200956980388,6.73042860031128,6.244995673497518,5.536863923072815
 749,facebook/opt-1.3b,Summarize the following text: ,Samsum," Allaah knows best.
 
 Camille: I'll be there.
@@ -2338,7 +2323,6 @@ Taylor:",Harry will go to Taylors party tomorrow at 8pm. ,0.7100897431373596,36.
 758,facebook/opt-1.3b,Summarize the following text: ,Samsum," now.
 Tomas: I'm going to go to bed now.
 Tomas: I","Tomas, Sierra and Jeremy have still not received the grant. Tomas is broke and is checking his bank account every hour. Sierra offers to lend him some money.",0.3188301026821136,130.0,0.10714285714285714,0.25,0.15,0.0,0.0,0.0,0.07142857142857142,0.16666666666666666,0.1,9.629223187764486,9.025700410207113,8.229960759480795,7.053324259244478,6.360491931438446
-759,facebook/opt-1.3b,Summarize the following text: ,Samsum,,Camilla has some errands to do on Saturday. Charles is visiting the German markets this weekend. They are talking about Christmas food and drinks.,0.1295095235109329,143.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.793965339660645,8.819903945922851,7.886636197566986,7.202376799149946,6.57530277115958
 760,facebook/opt-1.3b,Summarize the following text: ,Samsum,"
 Zoe: I think you have to be a member
 Pamela: Ok I'll",Pamela will look at their website to apply for the RGS grant. Zoe and Xiara applied last year but they weren't lucky. Sometimes you have to be a member to apply.,0.3334797918796539,131.0,0.25,0.6153846153846154,0.35555555555555557,0.16129032258064516,0.4166666666666667,0.2325581395348837,0.21875,0.5384615384615384,0.3111111111111111,11.063375473022461,9.18031052180699,8.147697362032803,7.47190621693929,6.673311208423815
