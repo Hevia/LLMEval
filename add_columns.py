@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from SimilarityHelpers import get_levenshtein_distance, get_bert_score_batch
+from SimilarityHelpers import get_levenshtein_distance
 
 def process_csv_files():
     """
@@ -54,36 +54,6 @@ def process_single_csv(file_path):
             needs_save = True
         else:
             print(f"levenshtein_distance column already exists in {file_path}")
-        
-        # Add BERT score column if it doesn't exist
-        if 'bert_score' not in df.columns:
-            print(f"Adding bert_score column to {file_path}")
-            
-            # Process each row individually since bert-score is computationally intensive
-            bert_scores = []
-            for i, row in df.iterrows():
-                try:
-                    gold = str(row['Gold_Labels'])
-                    test = str(row['Model_Responses'])
-                    
-                    # Get BERT score using the function
-                    bert_result = get_bert_score_batch([gold], [test])
-                    
-                    # Extract F1 score from the result
-                    if 'f1' in bert_result and len(bert_result['f1']) > 0:
-                        bert_scores.append(float(bert_result['f1'][0]))
-                    else:
-                        print(f"Warning: Could not extract F1 score for row {i}, using 0 as fallback")
-                        bert_scores.append(0.0)
-                except Exception as e:
-                    print(f"Error processing BERT score for row {i}: {str(e)}")
-                    bert_scores.append(0.0)
-            
-            # Add the bert_score column
-            df['bert_score'] = bert_scores
-            needs_save = True
-        else:
-            print(f"bert_score column already exists in {file_path}")
         
         # Save the modified CSV file only if changes were made
         if needs_save:
