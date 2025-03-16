@@ -135,9 +135,14 @@ def process_directory_files(models: Dict[str, Pipeline], directory: str) -> None
                 
                 # Map predictions to more meaningful labels
                 df_clean[f"{model_name}_status"] = df_clean[pred_col].map({
-                    0: "Clean", 
-                    1: "Contaminated"
+                    0: "Not Contaminated", 
+                    1: "Likely Contaminated"
                 })
+
+                # Rename the _status column to _label
+                df_clean = df_clean.rename(columns={f"{model_name}_status": f"{model_name}_label"})
+
+
             
             # Remove temporary label column before merging
             df_clean = df_clean.drop('label', axis=1)
