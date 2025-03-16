@@ -63,6 +63,7 @@ def check_missing(result_type, source, group):
 def run(source, group):
     check_missing("scores", source, group)
     check_missing("classifiers", source, group)
+    return
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
