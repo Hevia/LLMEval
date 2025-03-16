@@ -1,0 +1,35 @@
+LogisticRegression Results:
+Best Parameters: {'classifier__C': 0.001, 'classifier__penalty': 'l2', 'classifier__solver': 'liblinear'}
+Cross-Validation Score: 0.6923
+Test Accuracy: 0.6946
+Precision: 0.7075
+Recall: 0.9158
+F1 Score: 0.7983
+ROC AUC Score: 0.6968
+
+Confusion Matrix:
+[[1174 3245]
+ [ 722 7848]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.62      0.27      0.37      4419
+           1       0.71      0.92      0.80      8570
+
+    accuracy                           0.69     12989
+   macro avg       0.66      0.59      0.59     12989
+weighted avg       0.68      0.69      0.65     12989
+
+
+Feature Importance (Top 10):
+min_k_Min_50.0_Prob: 0.2641
+rouge2_recall: -0.1987
+min_k_Min_40.0_Prob: 0.1916
+levenshtein: 0.1911
+rouge1_precision: 0.1795
+rouge2_fmeasure: -0.1704
+rouge2_precision: -0.1696
+rouge1_fmeasure: 0.1279
+min_k_Min_30.0_Prob: 0.0922
+rougeL_precision: 0.0740

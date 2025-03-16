@@ -1,0 +1,16 @@
+numpy
+scikit-learn
+sentence-transformers
+transformers
+torch
+jupyter
+spacy
+pandas
+rouge-score
+ollama
+py7zr
+accelerate
+datasets
+bitsandbytes
+bert-score
+evaluate
