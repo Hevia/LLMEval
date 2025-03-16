@@ -22,6 +22,8 @@ from sklearn.metrics import confusion_matrix, classification_report, roc_curve, 
 from sklearn.pipeline import Pipeline
 from sklearn.base import BaseEstimator
 
+NOT_NAN_COLS = ["Min_K_Responses","cos_sim_scores","rouge_sim_scores","levenshtein_distance"]
+
 def is_string_null_whitespace_or_float(text: Any) -> bool:
     if text == 'nan' or text == '' or text == " " or text == None or isinstance(text, float) or not isinstance(text, str):
         return True
@@ -47,6 +49,10 @@ def process_csv_files(root_dir: str = './output') -> pd.DataFrame:
     # Get all dataset directories
     dataset_dirs: List[str] = [d for d in os.listdir(root_dir) if os.path.isdir(os.path.join(root_dir, d))]
     
+    # Skip models directory if present
+    if 'models' in dataset_dirs:
+        dataset_dirs.remove('models')
+    
     for dataset in dataset_dirs:
         dataset_path: str = os.path.join(root_dir, dataset)
         
@@ -56,7 +62,45 @@ def process_csv_files(root_dir: str = './output') -> pd.DataFrame:
             control_files: List[str] = glob.glob(os.path.join(control_path, '*.csv'))
             for csv_file in control_files:
                 print(f"Processing control file: {csv_file}")
-                df = pd.read_csv(csv_file)
+                try:
+                    # Try with error handling for problematic CSV files
+                    df = pd.read_csv(csv_file, on_bad_lines='warn', quotechar='"', escapechar='\\')
+                except Exception as e:
+                    print(f"ERROR: Failed to read {csv_file}: {str(e)}")
+                    print("Trying with more permissive CSV parsing...")
+                    try:
+                        # Try with more permissive CSV parsing
+                        df = pd.read_csv(csv_file, on_bad_lines='skip', quotechar='"', escapechar='\\')
+                        print(f"Successfully read file with {len(df)} rows after skipping bad lines")
+                    except Exception as e2:
+                        print(f"ERROR: Still failed to read {csv_file}: {str(e2)}")
+                        continue  # Skip this file
+                
+                # Check for corrupted data in cos_sim_scores (ROUGE data in wrong column)
+                if 'cos_sim_scores' in df.columns:
+                    corrupted_rows = []
+                    for i, val in enumerate(df['cos_sim_scores']):
+                        if isinstance(val, str) and 'rouge' in str(val).lower():
+                            corrupted_rows.append(i)
+                    
+                    if corrupted_rows:
+                        print(f"WARNING: {csv_file} has ROUGE data in cos_sim_scores column at rows: {corrupted_rows}")
+                
+                # Check for NaN values only in critical columns
+                rows_with_nan = df.index[df[NOT_NAN_COLS].isnull().any(axis=1)].tolist()
+                if rows_with_nan:
+                    print(f"WARNING: {csv_file} has {len(rows_with_nan)} rows with NaN values in critical columns")
+                    print(f"Rows with NaN: {rows_with_nan}")
+                    # Show which columns have NaN values for the first few rows
+                    if len(rows_with_nan) > 0:
+                        for i in rows_with_nan[:min(5, len(rows_with_nan))]:
+                            null_cols = df.columns[df.iloc[i].isnull()].tolist()
+                            # Only show critical columns with NaN
+                            critical_null_cols = [col for col in null_cols if col in NOT_NAN_COLS]
+                            print(f"  Row {i} has NaN in critical columns: {critical_null_cols}")
+                    # Drop rows with NaN in critical columns
+                    df = df.dropna(subset=NOT_NAN_COLS)
+                    print(f"Dropped {len(rows_with_nan)} rows with NaN values in critical columns")
                 
                 # Filter out rows where Model_Responses is null, whitespace, or empty
                 if 'Model_Responses' in df.columns:
@@ -75,7 +119,45 @@ def process_csv_files(root_dir: str = './output') -> pd.DataFrame:
             treatment_files: List[str] = glob.glob(os.path.join(treatment_path, '*.csv'))
             for csv_file in treatment_files:
                 print(f"Processing treatment file: {csv_file}")
-                df = pd.read_csv(csv_file)
+                try:
+                    # Try with error handling for problematic CSV files
+                    df = pd.read_csv(csv_file, on_bad_lines='warn', quotechar='"', escapechar='\\')
+                except Exception as e:
+                    print(f"ERROR: Failed to read {csv_file}: {str(e)}")
+                    print("Trying with more permissive CSV parsing...")
+                    try:
+                        # Try with more permissive CSV parsing
+                        df = pd.read_csv(csv_file, on_bad_lines='skip', quotechar='"', escapechar='\\')
+                        print(f"Successfully read file with {len(df)} rows after skipping bad lines")
+                    except Exception as e2:
+                        print(f"ERROR: Still failed to read {csv_file}: {str(e2)}")
+                        continue  # Skip this file
+                
+                # Check for corrupted data in cos_sim_scores (ROUGE data in wrong column)
+                if 'cos_sim_scores' in df.columns:
+                    corrupted_rows = []
+                    for i, val in enumerate(df['cos_sim_scores']):
+                        if isinstance(val, str) and 'rouge' in str(val).lower():
+                            corrupted_rows.append(i)
+                    
+                    if corrupted_rows:
+                        print(f"WARNING: {csv_file} has ROUGE data in cos_sim_scores column at rows: {corrupted_rows}")
+                
+                # Check for NaN values only in critical columns
+                rows_with_nan = df.index[df[NOT_NAN_COLS].isnull().any(axis=1)].tolist()
+                if rows_with_nan:
+                    print(f"WARNING: {csv_file} has {len(rows_with_nan)} rows with NaN values in critical columns")
+                    print(f"Rows with NaN: {rows_with_nan}")
+                    # Show which columns have NaN values for the first few rows
+                    if len(rows_with_nan) > 0:
+                        for i in rows_with_nan[:min(5, len(rows_with_nan))]:
+                            null_cols = df.columns[df.iloc[i].isnull()].tolist()
+                            # Only show critical columns with NaN
+                            critical_null_cols = [col for col in null_cols if col in NOT_NAN_COLS]
+                            print(f"  Row {i} has NaN in critical columns: {critical_null_cols}")
+                    # Drop rows with NaN in critical columns
+                    df = df.dropna(subset=NOT_NAN_COLS)
+                    print(f"Dropped {len(rows_with_nan)} rows with NaN values in critical columns")
                 
                 # Filter out rows where Model_Responses is null, whitespace, or empty
                 if 'Model_Responses' in df.columns:
@@ -96,13 +178,107 @@ def process_csv_files(root_dir: str = './output') -> pd.DataFrame:
     return combined_df
 
 
+def validate_features(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Validate all feature values before extraction. Discard rows with:
+    - NaN values in critical columns (defined in NOT_NAN_COLS)
+    - Invalid Min_K_Responses format
+    - Invalid rouge_sim_scores format
+    
+    Args:
+        df: DataFrame with raw data
+        
+    Returns:
+        DataFrame with only valid rows
+    """
+    initial_row_count = len(df)
+    valid_rows = []
+    
+    # Track reasons for discarding rows
+    nan_count = 0
+    invalid_min_k_count = 0
+    invalid_rouge_count = 0
+    
+    for idx, row in df.iterrows():
+        # Check for NaN values only in critical columns
+        if row[NOT_NAN_COLS].isnull().any():
+            nan_count += 1
+            continue
+            
+        # Validate Min_K_Responses format
+        if pd.notna(row['Min_K_Responses']):
+            min_k_text = str(row['Min_K_Responses'])
+            min_k_pattern = r"'(Min_[\d.]+%\s+Prob)':\s*([\d.]+)"
+            matches = re.findall(min_k_pattern, min_k_text)
+            
+            if not matches:
+                invalid_min_k_count += 1
+                continue
+        
+        # Validate rouge_sim_scores format
+        if pd.notna(row['rouge_sim_scores']):
+            rouge_text = str(row['rouge_sim_scores'])
+            # Basic validation - should contain all three rouge types
+            if not all(x in rouge_text for x in ['rouge1', 'rouge2', 'rougeL']):
+                invalid_rouge_count += 1
+                continue
+                
+            # Advanced validation - check for parseable structure
+            try:
+                patterns = {
+                    'rouge1': r"rouge1'?: Score\(precision=([\d.]+), recall=([\d.]+), fmeasure=([\d.]+)\)",
+                    'rouge2': r"rouge2'?: Score\(precision=([\d.]+), recall=([\d.]+), fmeasure=([\d.]+)\)",
+                    'rougeL': r"rougeL'?: Score\(precision=([\d.]+), recall=([\d.]+), fmeasure=([\d.]+)\)"
+                }
+                
+                valid_rouge = True
+                for rouge_type, pattern in patterns.items():
+                    if not re.search(pattern, rouge_text):
+                        valid_rouge = False
+                        break
+                
+                if not valid_rouge:
+                    invalid_rouge_count += 1
+                    continue
+            except Exception:
+                invalid_rouge_count += 1
+                continue
+                
+        # Validate cos_sim_scores is a number
+        if pd.notna(row['cos_sim_scores']):
+            try:
+                float(row['cos_sim_scores'])
+            except (ValueError, TypeError):
+                # Check if it looks like rouge data in cos_sim_scores column
+                if isinstance(row['cos_sim_scores'], str) and 'rouge' in str(row['cos_sim_scores']).lower():
+                    invalid_rouge_count += 1
+                    continue
+        
+        # If we get here, the row is valid
+        valid_rows.append(idx)
+    
+    # Create new dataframe with only valid rows
+    validated_df = df.loc[valid_rows].copy()
+    
+    # Log discarded rows
+    discarded_count = initial_row_count - len(validated_df)
+    if discarded_count > 0:
+        print(f"Discarded {discarded_count} rows during feature validation:")
+        print(f"  - {nan_count} rows with NaN values in critical columns")
+        print(f"  - {invalid_min_k_count} rows with invalid Min_K_Responses format")
+        print(f"  - {invalid_rouge_count} rows with invalid rouge_sim_scores format")
+    
+    return validated_df
+
+
 def extract_features(df: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, List[str]]:
     """
     Extract numerical features from DataFrame.
     Handles the JSON-like structure in Min_K_Responses and rouge_sim_scores.
+    Assumes data has been validated.
     
     Args:
-        df: DataFrame with raw data
+        df: DataFrame with validated data
         
     Returns:
         X: Feature matrix
@@ -113,16 +289,16 @@ def extract_features(df: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, List[str
     features: List[Dict[str, float]] = []
     
     # Parse the JSON-like structures in Min_K_Responses and rouge_sim_scores
-    for _, row in df.iterrows():
+    for idx, row in df.iterrows():
         row_features: Dict[str, float] = {}
         
-        # Extract cos_sim_scores
+        # Extract cos_sim_scores (should be a valid float at this point)
         if pd.notna(row['cos_sim_scores']):
             row_features['cos_sim'] = float(row['cos_sim_scores'])
         else:
             row_features['cos_sim'] = 0.0
             
-        # Extract levenshtein_distance
+        # Extract levenshtein_distance (should be a valid float at this point)
         if pd.notna(row['levenshtein_distance']):
             row_features['levenshtein'] = float(row['levenshtein_distance'])
         else:
@@ -130,39 +306,21 @@ def extract_features(df: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, List[str
             
         # Extract Min_K_Responses features
         if pd.notna(row['Min_K_Responses']):
-            try:
-                # Convert to string to ensure consistent processing
-                min_k_text = str(row['Min_K_Responses'])
-                
-                # Define regex pattern to extract Min_K values
-                # This pattern matches key-value pairs like: 'Min_10.0% Prob': 14.023460388183594
-                min_k_pattern = r"'(Min_[\d.]+%\s+Prob)':\s*([\d.]+)"
-                
-                # Find all matches in the text
-                matches = re.findall(min_k_pattern, min_k_text)
-                
-                if matches:
-                    for k, v in matches:
-                        # Clean up the key name
-                        clean_key = k.replace("'", "").replace("%", "").replace(" ", "_")
-                        row_features[f'min_k_{clean_key}'] = float(v)
-                else:
-                    # Set default values if no matches found
-                    row_features['min_k_Min_10_Prob'] = 0.0
-                    row_features['min_k_Min_20_Prob'] = 0.0
-                    row_features['min_k_Min_30_Prob'] = 0.0
-                    row_features['min_k_Min_40_Prob'] = 0.0
-                    row_features['min_k_Min_50_Prob'] = 0.0
-            except Exception as e:
-                print(f"Error parsing Min_K_Responses [{type(e).__name__}]: {e}")
-                print(f"Problematic value: {row['Min_K_Responses'][:100]}...")  # Print first 100 chars
-                
-                # Set default values
-                row_features['min_k_Min_10_Prob'] = 0.0
-                row_features['min_k_Min_20_Prob'] = 0.0
-                row_features['min_k_Min_30_Prob'] = 0.0
-                row_features['min_k_Min_40_Prob'] = 0.0
-                row_features['min_k_Min_50_Prob'] = 0.0
+            # Convert to string to ensure consistent processing
+            min_k_text = str(row['Min_K_Responses'])
+            
+            # Define regex pattern to extract Min_K values
+            # This pattern matches key-value pairs like: 'Min_10.0% Prob': 14.023460388183594
+            min_k_pattern = r"'(Min_[\d.]+%\s+Prob)':\s*([\d.]+)"
+            
+            # Find all matches in the text
+            matches = re.findall(min_k_pattern, min_k_text)
+            
+            # The validation function ensures we have matches here
+            for k, v in matches:
+                # Clean up the key name
+                clean_key = k.replace("'", "").replace("%", "").replace(" ", "_")
+                row_features[f'min_k_{clean_key}'] = float(v)
         else:
             # Set default values if Min_K_Responses is NA
             row_features['min_k_Min_10_Prob'] = 0.0
@@ -173,42 +331,29 @@ def extract_features(df: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, List[str
         
         # Extract rouge_sim_scores features
         if pd.notna(row['rouge_sim_scores']):
-            try:
-                # Using regex patterns to extract rouge scores instead of string replacement
-                rouge_metrics = {'rouge1': {}, 'rouge2': {}, 'rougeL': {}}
-                
-                # Define regex patterns to extract values
-                patterns = {
-                    'rouge1': r"rouge1'?: Score\(precision=([\d.]+), recall=([\d.]+), fmeasure=([\d.]+)\)",
-                    'rouge2': r"rouge2'?: Score\(precision=([\d.]+), recall=([\d.]+), fmeasure=([\d.]+)\)",
-                    'rougeL': r"rougeL'?: Score\(precision=([\d.]+), recall=([\d.]+), fmeasure=([\d.]+)\)"
-                }
-                
-                rouge_text = str(row['rouge_sim_scores'])
-                
-                # Extract values using regex for each rouge type
-                for rouge_type, pattern in patterns.items():
-                    match = re.search(pattern, rouge_text)
-                    if match:
-                        precision, recall, fmeasure = match.groups()
-                        row_features[f'{rouge_type}_precision'] = float(precision)
-                        row_features[f'{rouge_type}_recall'] = float(recall)
-                        row_features[f'{rouge_type}_fmeasure'] = float(fmeasure)
-                    else:
-                        # Set default values if pattern not found
-                        row_features[f'{rouge_type}_precision'] = 0.0
-                        row_features[f'{rouge_type}_recall'] = 0.0
-                        row_features[f'{rouge_type}_fmeasure'] = 0.0
-                        
-            except Exception as e:
-                # More generic exception handling with detailed error information
-                print(f"Error parsing rouge_sim_scores [{type(e).__name__}]: {e}")
-                print(f"Problematic value: {row['rouge_sim_scores'][:100]}...")  # Print first 100 chars
-                
-                # Set default values for rouge metrics
-                for rouge_type in ['rouge1', 'rouge2', 'rougeL']:
-                    for metric in ['precision', 'recall', 'fmeasure']:
-                        row_features[f'{rouge_type}_{metric}'] = 0.0
+            # Using regex patterns to extract rouge scores
+            patterns = {
+                'rouge1': r"rouge1'?: Score\(precision=([\d.]+), recall=([\d.]+), fmeasure=([\d.]+)\)",
+                'rouge2': r"rouge2'?: Score\(precision=([\d.]+), recall=([\d.]+), fmeasure=([\d.]+)\)",
+                'rougeL': r"rougeL'?: Score\(precision=([\d.]+), recall=([\d.]+), fmeasure=([\d.]+)\)"
+            }
+            
+            rouge_text = str(row['rouge_sim_scores'])
+            
+            # Extract values using regex for each rouge type
+            # The validation function ensures these values are present
+            for rouge_type, pattern in patterns.items():
+                match = re.search(pattern, rouge_text)
+                if match:
+                    precision, recall, fmeasure = match.groups()
+                    row_features[f'{rouge_type}_precision'] = float(precision)
+                    row_features[f'{rouge_type}_recall'] = float(recall)
+                    row_features[f'{rouge_type}_fmeasure'] = float(fmeasure)
+                else:
+                    # This should not happen with validated data, but as a fallback
+                    row_features[f'{rouge_type}_precision'] = 0.0
+                    row_features[f'{rouge_type}_recall'] = 0.0
+                    row_features[f'{rouge_type}_fmeasure'] = 0.0
         else:
             # Set default values if rouge_sim_scores is NA
             for rouge_type in ['rouge1', 'rouge2', 'rougeL']:
@@ -220,7 +365,7 @@ def extract_features(df: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, List[str
     # Convert to DataFrame
     feature_df: pd.DataFrame = pd.DataFrame(features)
     
-    # Handle missing values
+    # Handle missing values (should be few to none with validation)
     feature_df.fillna(0, inplace=True)
     
     # Extract labels
@@ -415,7 +560,8 @@ def plot_results(results: Dict[str, Dict[str, Any]], X_test: np.ndarray, y_test:
         y_test: Test labels
     """
     # Create directory for plots if it doesn't exist
-    os.makedirs("./plots", exist_ok=True)
+    output_dir = "./output/plots"
+    os.makedirs(output_dir, exist_ok=True)
     
     # Plot accuracy comparison
     plt.figure(figsize=(10, 6))
@@ -426,7 +572,7 @@ def plot_results(results: Dict[str, Dict[str, Any]], X_test: np.ndarray, y_test:
     plt.ylim(0, 1)
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.savefig('./plots/model_accuracy_comparison.png')
+    plt.savefig(os.path.join(output_dir, 'model_accuracy_comparison.png'))
     
     # Plot F1 score comparison
     plt.figure(figsize=(10, 6))
@@ -437,7 +583,7 @@ def plot_results(results: Dict[str, Dict[str, Any]], X_test: np.ndarray, y_test:
     plt.ylim(0, 1)
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.savefig('./plots/model_f1_comparison.png')
+    plt.savefig(os.path.join(output_dir, 'model_f1_comparison.png'))
     
     # Plot ROC curves
     plt.figure(figsize=(10, 8))
@@ -461,7 +607,31 @@ def plot_results(results: Dict[str, Dict[str, Any]], X_test: np.ndarray, y_test:
     plt.legend(loc="lower right")
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig('./plots/roc_curves.png')
+    plt.savefig(os.path.join(output_dir, 'roc_curves.png'))
+    
+    # Plot confusion matrices for each model
+    for name, result in results.items():
+        conf_matrix = result['confusion_matrix']
+        plt.figure(figsize=(8, 6))
+        plt.imshow(conf_matrix, interpolation='nearest', cmap=plt.cm.Blues)
+        plt.title(f'Confusion Matrix - {name}')
+        plt.colorbar()
+        tick_marks = np.arange(2)  # Binary classification
+        plt.xticks(tick_marks, ['Not Contaminated', 'Contaminated'], rotation=45)
+        plt.yticks(tick_marks, ['Not Contaminated', 'Contaminated'])
+        
+        # Add text annotations to the confusion matrix
+        thresh = conf_matrix.max() / 2
+        for i in range(conf_matrix.shape[0]):
+            for j in range(conf_matrix.shape[1]):
+                plt.text(j, i, format(conf_matrix[i, j], 'd'),
+                        ha="center", va="center",
+                        color="white" if conf_matrix[i, j] > thresh else "black")
+        
+        plt.ylabel('True Label')
+        plt.xlabel('Predicted Label')
+        plt.tight_layout()
+        plt.savefig(os.path.join(output_dir, f'confusion_matrix_{name}.png'))
     
     # Plot feature importance for the best model
     best_model_name: str = max(results.keys(), key=lambda k: results[k]['f1'])
@@ -479,7 +649,7 @@ def plot_results(results: Dict[str, Dict[str, Any]], X_test: np.ndarray, y_test:
         plt.xlabel('Importance')
         plt.title(f'Top Feature Importance - {best_model_name}')
         plt.tight_layout()
-        plt.savefig('./plots/feature_importance.png')
+        plt.savefig(os.path.join(output_dir, 'feature_importance.png'))
 
 
 def main() -> None:
@@ -487,12 +657,17 @@ def main() -> None:
     print("Processing CSV files...")
     df: pd.DataFrame = process_csv_files()
     
+    # Validate features before extraction
+    print("\nValidating features...")
+    validated_df = validate_features(df)
+    print(f"Rows after validation: {len(validated_df)} (original: {len(df)})")
+    
     # Extract features
     print("\nExtracting features...")
     X: np.ndarray
     y: np.ndarray
     feature_names: List[str]
-    X, y, feature_names = extract_features(df)
+    X, y, feature_names = extract_features(validated_df)
     
     print(f"\nDataset summary:")
     print(f"Total samples: {len(y)}")
@@ -517,7 +692,7 @@ def main() -> None:
     print("\nGenerating plots...")
     plot_results(results, X_test, y_test)
     
-    print("\nTraining complete! Results saved to the plots directory.")
+    print("\nTraining complete! Results saved to the out/plots directory.")
     print("Models saved to the ./output/models/ directory.")
 
 
