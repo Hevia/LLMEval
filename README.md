@@ -44,29 +44,37 @@ python -m venv venv
 ```cmd
 pip install -r requirements.txt
 ```
-### D3
-#### Downloading Data
-For SAM-Sum:
+### D5
+#### Automatic prep + validation
+1. Switch to the `data_analysis` module:
 ```cmd
-curl -L -O https://huggingface.co/datasets/Samsung/samsum/resolve/main/data/corpus.7z 
-7z x corpus.7z
+cd data_analysis
+```
+2. Run the controller validation script which will run everything for all datasets and partitions:
+```cmd
+python validate.py
+```
+#### Manual prep + validation
+1. Switch to the `data_analysis` module:
+```cmd
+cd data_analysis
+```
+2. For each dataset and partition, prepare the columns for data analysis
+```cmd
+python prepare_clean.py CNN-DailyMail Control
+python prepare_clean.py CNN-DailyMail Treatment
+python prepare_clean.py Samsum Control
+python prepare_clean.py Samsum Treatment
+python prepare_clean.py Xsum Control
+python prepare_clean.py Xsum Treatment
 ```
 
-For Webis:
+3. Validate that analysis prep went through correctly for both scores and classifier results:
 ```cmd
-for i in {0..9};
-    do curl -L -O https://huggingface.co/datasets/webis/tldr-17/resolve/refs%2Fconvert%2Fparquet/default/partial-train/000$i.parquet; 
-done
+python validate.py CNN-DailyMail Control
+python validate.py CNN-DailyMail Treatment
+python validate.py Samsum Control
+python validate.py Samsum Treatment
+python validate.py Xsum Control
+python validate.py Xsum Treatment
 ```
-#### EDA
-- `samsum/test.json` ([Source](https://huggingface.co/datasets/Samsung/samsum))
-    - 819 instances
-    - 3 fields: `id`, `summary`, `dialogue`
-    - dialogue ranges from 3-30 utterances (newline-separated)
-    
-- `webis/data.json` ([Source](https://huggingface.co/datasets/webis/tldr-17))
-    - 3,848,330 instances in full
-    - We can consider using the `partial-train` branch data (9 parquets) -- see download instructions above
-    - relevant fields: `id`, `content`, `summary`, `subreddit`
-
-A single parquet of the Webis data is massive compared to SAM-Sum test split. [Another repo](https://github.com/anna-kay/Reddit-summarization/blob/main/notebooks/filtering/Webis-TLDR-17_filtering.ipynb) includes analysis on duplicate rows and removing problematic rows, which we may want to do as well. We may also want to remove noisy/graphic data from certain subreddits, etc. (maybe only keep `TrueReddit`, or `AskReddit`?)

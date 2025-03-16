@@ -6,6 +6,14 @@ import argparse
 from glob import glob
 import os
 
+def write_to_dir(f, source, group, df, result_type):
+    result_filename = f'{result_type}_{(f.split("/")[-1])}'
+    result_dir = f'{result_type}/{source}/{group}'
+    os.makedirs(result_dir, exist_ok=True)
+    file_path = os.path.join(result_dir, result_filename)
+    df.to_csv(file_path)
+    return
+
 def drop_blank_responses(df):
     """Log number of blank model responses before dropping those rows from the final data."""
     blank = int(df.Model_Responses.isna().sum())
@@ -46,17 +54,11 @@ def safe_literal_eval(val):
             return None  # Return None if conversion fails
     return val  # Return as-is if not a string
 
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("source_data", type=str)
-    parser.add_argument("model_group", type=str)
-    
-    args= parser.parse_args()
-
-    input_files = glob(f"../output/{args.source_data}/{args.model_group}/*.csv")
+def run(source, group):
+    input_files = glob(f"../output/{source}/{group}/*.csv")
 
     for f in input_files:
+        print(f"Parsing {f}...")
         df = pd.read_csv(f, dtype=object)
 
         df["Min_K_Responses"] = df["Min_K_Responses"].apply(safe_literal_eval)
@@ -91,18 +93,33 @@ if __name__ == "__main__":
             'Min_50.0%_Prob': x['Min_50.0% Prob']
         })))
 
-        # Drop old columns
+        # Drop old score columns
         df = df.drop(columns=['rouge_sim_scores', 'Min_K_Responses'])
 
         # Drop blank outputs
         df = drop_blank_responses(df)
 
-        result_filename = f'results_{(f.split("/")[-1])}'
-        result_dir = f'{args.source_data}/{args.model_group}'
-        os.makedirs(result_dir, exist_ok=True)
-        file_path = os.path.join(result_dir, result_filename)
-        df.to_csv(file_path)
-        print(f"Parsed {f}")
+        # Classifier strings and column lists
+        classifiers = ["GradientBoosting", "LogisticRegression", "RandomForest"]
+        classifier_cols = [col for col in df.columns if any([cx in col for cx in classifiers])]
+        core = ['Model', 'Task_Prefix', 'Dataset_Name', 'Model_Responses','Gold_Labels']
+
+        # Split scores from classifier results
+        df_scores = df.drop(columns=classifier_cols)
+        df_classifiers = df[core + classifier_cols]
+
+        # Write to output
+        write_to_dir(f, source, group, df_scores, "scores")
+        write_to_dir(f, source, group, df_classifiers, "classifiers")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("source_data", type=str)
+    parser.add_argument("model_group", type=str)
+    
+    args= parser.parse_args()
+
+    run(args.source_data, args.model_group)
         
 
 
