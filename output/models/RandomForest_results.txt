@@ -1,35 +1,35 @@
 RandomForest Results:
-Best Parameters: {'classifier__max_depth': 30, 'classifier__min_samples_leaf': 1, 'classifier__min_samples_split': 10, 'classifier__n_estimators': 200}
-Cross-Validation Score: 0.7864
-Test Accuracy: 0.7904
-Precision: 0.8099
-Recall: 0.8916
-F1 Score: 0.8488
-ROC AUC Score: 0.8503
+Best Parameters: {'classifier__max_depth': None, 'classifier__min_samples_leaf': 2, 'classifier__min_samples_split': 10, 'classifier__n_estimators': 200}
+Cross-Validation Score: 0.7493
+Test Accuracy: 0.7411
+Precision: 0.7569
+Recall: 0.8394
+F1 Score: 0.7960
+ROC AUC Score: 0.8166
 
 Confusion Matrix:
-[[2625 1794]
- [ 929 7641]]
+[[3589 2469]
+ [1471 7687]]
 
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.74      0.59      0.66      4419
-           1       0.81      0.89      0.85      8570
+           0       0.71      0.59      0.65      6058
+           1       0.76      0.84      0.80      9158
 
-    accuracy                           0.79     12989
-   macro avg       0.77      0.74      0.75     12989
-weighted avg       0.79      0.79      0.78     12989
+    accuracy                           0.74     15216
+   macro avg       0.73      0.72      0.72     15216
+weighted avg       0.74      0.74      0.74     15216
 
 
 Feature Importance (Top 10):
-cos_sim: 0.1378
-levenshtein: 0.0832
-rougeL_recall: 0.0768
-min_k_Min_50.0_Prob: 0.0753
-min_k_Min_40.0_Prob: 0.0696
-min_k_Min_30.0_Prob: 0.0654
-min_k_Min_20.0_Prob: 0.0651
-rouge1_precision: 0.0647
-min_k_Min_10.0_Prob: 0.0616
-rougeL_precision: 0.0582
+cos_sim: 0.1605
+levenshtein: 0.0835
+min_k_Min_50.0_Prob: 0.0756
+min_k_Min_40.0_Prob: 0.0725
+min_k_Min_30.0_Prob: 0.0679
+min_k_Min_20.0_Prob: 0.0669
+min_k_Min_10.0_Prob: 0.0661
+rougeL_recall: 0.0639
+rouge1_precision: 0.0586
+rougeL_precision: 0.0535

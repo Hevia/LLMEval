@@ -1,35 +1,35 @@
 GradientBoosting Results:
 Best Parameters: {'classifier__learning_rate': 0.1, 'classifier__max_depth': 7, 'classifier__n_estimators': 200}
-Cross-Validation Score: 0.7881
-Test Accuracy: 0.7937
-Precision: 0.8132
-Recall: 0.8924
-F1 Score: 0.8510
-ROC AUC Score: 0.8560
+Cross-Validation Score: 0.7522
+Test Accuracy: 0.7433
+Precision: 0.7596
+Recall: 0.8389
+F1 Score: 0.7973
+ROC AUC Score: 0.8224
 
 Confusion Matrix:
-[[2662 1757]
- [ 922 7648]]
+[[3627 2431]
+ [1475 7683]]
 
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.74      0.60      0.67      4419
-           1       0.81      0.89      0.85      8570
+           0       0.71      0.60      0.65      6058
+           1       0.76      0.84      0.80      9158
 
-    accuracy                           0.79     12989
-   macro avg       0.78      0.75      0.76     12989
-weighted avg       0.79      0.79      0.79     12989
+    accuracy                           0.74     15216
+   macro avg       0.74      0.72      0.72     15216
+weighted avg       0.74      0.74      0.74     15216
 
 
 Feature Importance (Top 10):
-cos_sim: 0.2184
-rougeL_recall: 0.1195
-rouge2_recall: 0.1065
-levenshtein: 0.0953
-min_k_Min_50.0_Prob: 0.0928
-rougeL_precision: 0.0772
-min_k_Min_20.0_Prob: 0.0457
-rouge1_precision: 0.0424
-min_k_Min_10.0_Prob: 0.0368
-min_k_Min_40.0_Prob: 0.0341
+cos_sim: 0.2608
+rouge2_recall: 0.1084
+rougeL_recall: 0.1066
+levenshtein: 0.0965
+min_k_Min_40.0_Prob: 0.0642
+min_k_Min_50.0_Prob: 0.0612
+min_k_Min_20.0_Prob: 0.0482
+rougeL_precision: 0.0451
+min_k_Min_10.0_Prob: 0.0446
+rouge1_precision: 0.0378
