@@ -1,0 +1,26 @@
+\begin{table}
+\caption{Average metric values across the huggingfacetb subgroup for CNN-DailyMail}
+\label{tab:}
+\begin{tabular}{llll}
+\toprule
+Model & HuggingFaceTB/SmolLM2-1.7B-Instruct & HuggingFaceTB/SmolLM2-135M-Instruct & HuggingFaceTB/SmolLM2-360M-Instruct \\
+\midrule
+cos sim & 0.5433±0.1528 & 0.5214±0.1639 & 0.5342±0.1618 \\
+levenshtein & 260.6672±105.4471 & 264.2032±148.0922 & 264.9253±148.1357 \\
+min k Min 10.0 Prob & 9.8498±1.2319 & 10.9965±1.1828 & 10.3514±1.1954 \\
+min k Min 20.0 Prob & 8.2055±1.0736 & 9.29±0.9937 & 8.6909±1.0123 \\
+min k Min 30.0 Prob & 7.1014±0.9894 & 8.1887±0.9216 & 7.6072±0.9271 \\
+min k Min 40.0 Prob & 6.2423±0.9161 & 7.3139±0.8727 & 6.7468±0.866 \\
+min k Min 50.0 Prob & 5.5306±0.8436 & 6.5668±0.8239 & 6.0211±0.8065 \\
+rouge1 precision & 0.1181±0.0577 & 0.1198±0.0637 & 0.1194±0.0614 \\
+rouge1 recall & 0.4725±0.185 & 0.4595±0.1914 & 0.4734±0.1873 \\
+rouge1 fmeasure & 0.1839±0.0803 & 0.1848±0.0872 & 0.1854±0.0839 \\
+rouge2 precision & 0.0403±0.0418 & 0.0411±0.0458 & 0.0415±0.0435 \\
+rouge2 recall & 0.1757±0.1619 & 0.1692±0.1631 & 0.1777±0.1626 \\
+rouge2 fmeasure & 0.0637±0.0625 & 0.0642±0.0671 & 0.0653±0.064 \\
+rougeL precision & 0.0919±0.049 & 0.0929±0.0549 & 0.093±0.0521 \\
+rougeL recall & 0.3681±0.1611 & 0.3569±0.1686 & 0.37±0.1658 \\
+rougeL fmeasure & 0.1429±0.0686 & 0.1432±0.0758 & 0.1444±0.072 \\
+\bottomrule
+\end{tabular}
+\end{table}
