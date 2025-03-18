@@ -1,9 +1,71 @@
 import sys
 import os
+import argparse
+from itertools import product
 sys.path.append(os.path.abspath('..'))
 from train_classifiers import *
+import numpy as np
+import pandas as pd
 
-def extract_metrics(df: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, List[str]]:
+def extract_classification(df: pd.DataFrame) -> pd.DataFrame:
+    metadata = [
+        'Model',
+        'Task_Prefix',
+        'Dataset_Name',
+        'Model_Responses',
+        'Gold_Labels'
+    ]
+
+    models = [
+        "GradientBoosting",
+        "LogisticRegression",
+        "RandomForest"
+    ]
+    targets = [
+        # "prediction",
+        # "probability",
+        "status"
+    ]
+
+    print()
+
+    model_results = ["_".join(p) for p in product(models, targets)]
+            
+    # Process and extract results
+    results: List[Dict[str, float]] = []
+
+    # Parse the JSON-like structures in Min_K_Responses and rouge_sim_scores
+    for _, row in df.iterrows():
+        row_results: Dict[str, float] = {}
+        # Extract metadata
+        for mdx in metadata:
+            row_results[mdx] = row[mdx]
+        
+        for mrx in model_results:
+            # get the most recently added column in this type
+            candidates = [c for c in row.keys() if mrx in c]
+
+            # sort candidates by merge recency
+            candidates.sort(key=lambda x: x.count("_"), reverse=True)
+
+            for pick in candidates:
+                empty = (row[pick] == None) or (row[pick] == np.nan) or (row[pick] == "")
+                if pick in row.keys() and not empty:
+                    row_results[mrx] = row[pick]
+                else:
+                    print(f"no value found for {mrx}")
+                    print(f"candidates: {candidates}")
+
+            # pick = sorted(candidates, reverse=True, key=lambda x: x.count('_')).pop()
+            # row_results[mrx] = row[pick]
+
+        results.append(row_results)
+
+    results_df = pd.DataFrame(results)
+    # results_df.fillna(0, inplace=True)
+    return results_df
+
+def extract_metrics(df: pd.DataFrame) -> pd.DataFrame:
     """
     Extract numerical metrics from DataFrame.
     Handles the JSON-like structure in Min_K_Responses and rouge_sim_scores.
@@ -113,6 +175,10 @@ def extract_metrics(df: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, List[str]
     return metric_df
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("result_type", type=str)
+    args= parser.parse_args()
+
     # Process CSV files and extract data
     print("Processing CSV files...")
     df: pd.DataFrame = process_csv_files("../output")
@@ -125,16 +191,28 @@ if __name__ == "__main__":
     # Fix inconsistent Xsum naming
     validated_df['Dataset_Name'] = validated_df['Dataset_Name'].replace("XSum", "Xsum")
 
-     # Extract metrics
-    print("\nExtracting metrics...")
-    X: pd.DataFrame
-    X = extract_metrics(validated_df)
-    
     print(f"\nDataset summary:")
-    print(f"Total samples: {len(X)}")
-    print(f"Number of metrics: {X.shape[1]}")
+    print(f"Total samples: {validated_df.shape[0]}")
 
-    # Write diff experiment sources to distinct files
-    for name, g in X.groupby('Dataset_Name'):
-        print(f"Writing validated data for {name}")
-        g.to_csv(f"{name}_validated.csv",index=False)
+    if args.result_type == "metrics":
+     # Extract metrics
+        print("\nExtracting metrics...")
+        X: pd.DataFrame
+        X = extract_metrics(validated_df)
+
+        # Write diff experiment sources to distinct files
+        for name, g in X.groupby('Dataset_Name'):
+            print(f"Writing validated data for {name}")
+            g.to_csv(f"{name}_validated.csv",index=False)
+    
+    elif args.result_type == "results":
+        print("\nExtracting classification results...")
+        Z: pd.DataFrame
+        Z = extract_classification(validated_df)
+
+        Z.to_csv(f"classification/all_classification.csv", index=False)
+        # for name, g in Z.groupby('Dataset_Name'):
+        #     print(f"Writing classification results for {name}")
+        #     g.to_csv(f"classification/{name}_classification.csv", index=False)
+    
+    
