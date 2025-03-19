@@ -54,8 +54,8 @@ def safe_literal_eval(val):
             return None  # Return None if conversion fails
     return val  # Return as-is if not a string
 
-def process():
-    files = glob(f"./validated/*prediction.csv")
+def process(wildcard="./validated/*prediction.csv"):
+    files = glob(wildcard)
 
     for f in files:
         print(f"Parsing {f}...")
@@ -99,17 +99,8 @@ def process():
         # Drop blank outputs
         df = drop_blank_responses(df)
 
-        # Classifier strings and column lists
-        # classifiers = ["GradientBoosting", "LogisticRegression", "RandomForest"]
-        # classifier_cols = [col for col in df.columns if any([cx in col for cx in classifiers])]
-        # core = ['Model', 'Task_Prefix', 'Dataset_Name', 'Model_Responses','Gold_Labels']
-
-        # # Split scores from classifier results
-        # df_scores = df.drop(columns=classifier_cols)
-        # df_classifiers = df[core + classifier_cols]
-
-        dataset = f.split("/")[-1].split(".")[0]
-        df.to_csv(f"{dataset}_scores_predictions.csv")
+        dataset = f.split("/")[-1].split(".")[0].split("_")[0]
+        df.to_csv(f"./validated/{dataset}_scores_predictions.csv")
 
 def run(source, group):
     input_files = glob(f"../output/{source}/{group}/*.csv")

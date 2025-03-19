@@ -21,7 +21,8 @@ if __name__ == "__main__":
 
     targets = [
         "GradientBoosting",
-        "LogisticRegression"
+        "LogisticRegression",
+        "RandomForest"
     ]
 
     # datasets = ["CNN-DailyMail", "Samsum", "Xsum"]
@@ -59,15 +60,16 @@ if __name__ == "__main__":
         y_pred = clf.predict(X)
         
         clean[f"{model}_prediction"] = y_pred.tolist()
-
+        # clean = pd.concat([clean, pd.DataFrame(y_pred)], axis=1)
         # write to output
 
-    for dataset, g in clean.groupby("Dataset_Name"):
-        g.to_csv(f"./validated/{dataset}_prediction.csv")
-        print(f"{dataset} predictions complete...")
+    clean.to_csv("all.csv")
+    # for dataset, g in clean.groupby("Dataset_Name"):
+    #     g.to_csv(f"./validated/{dataset}_prediction.csv")
+    #     print(f"{dataset} predictions complete...")
     
-    print("preparing for data analysis...")
-    prepare_clean.process()
+    # print("preparing for data analysis...")
+    prepare_clean.process("all.csv")
     print("DONE")
         
 
