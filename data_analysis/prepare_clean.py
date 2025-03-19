@@ -54,9 +54,67 @@ def safe_literal_eval(val):
             return None  # Return None if conversion fails
     return val  # Return as-is if not a string
 
+def process():
+    files = glob(f"./validated/*prediction.csv")
+
+    for f in files:
+        print(f"Parsing {f}...")
+        df = pd.read_csv(f, dtype=object)
+
+        df["Min_K_Responses"] = df["Min_K_Responses"].apply(safe_literal_eval)
+
+        # Verify the conversion
+        assert isinstance(df["Min_K_Responses"][0], dict)
+                                        
+        df['rouge_sim_scores'] = df['rouge_sim_scores'].apply(parse_rouge_scores)
+        df['cos_sim_scores'] = df['cos_sim_scores'].apply(float)
+        df['levenshtein_distance'] = df['levenshtein_distance'].apply(float)
+
+
+        # Apply parsing to each dictionary entry
+        df = df.join(df['rouge_sim_scores'].apply(lambda x: pd.Series({
+            'rouge1_precision': x['rouge1']['precision'],
+            'rouge1_recall': x['rouge1']['recall'],
+            'rouge1_f1': x['rouge1']['f1'],
+            'rouge2_precision': x['rouge2']['precision'],
+            'rouge2_recall': x['rouge2']['recall'],
+            'rouge2_f1': x['rouge2']['f1'],
+            'rougeL_precision': x['rougeL']['precision'],
+            'rougeL_recall': x['rougeL']['recall'],
+            'rougeL_f1': x['rougeL']['f1']
+        })))
+
+
+        df = df.join(df['Min_K_Responses'].apply(lambda x: pd.Series({
+            'Min_10.0%_Prob': x['Min_10.0% Prob'],
+            'Min_20.0%_Prob': x['Min_20.0% Prob'],
+            'Min_30.0%_Prob': x['Min_30.0% Prob'],
+            'Min_40.0%_Prob': x['Min_40.0% Prob'],
+            'Min_50.0%_Prob': x['Min_50.0% Prob']
+        })))
+
+        # Drop old score columns
+        df = df.drop(columns=['rouge_sim_scores', 'Min_K_Responses'])
+
+        # Drop blank outputs
+        df = drop_blank_responses(df)
+
+        # Classifier strings and column lists
+        # classifiers = ["GradientBoosting", "LogisticRegression", "RandomForest"]
+        # classifier_cols = [col for col in df.columns if any([cx in col for cx in classifiers])]
+        # core = ['Model', 'Task_Prefix', 'Dataset_Name', 'Model_Responses','Gold_Labels']
+
+        # # Split scores from classifier results
+        # df_scores = df.drop(columns=classifier_cols)
+        # df_classifiers = df[core + classifier_cols]
+
+        dataset = f.split("/")[-1].split(".")[0]
+        df.to_csv(f"{dataset}_scores_predictions.csv")
+
 def run(source, group):
     input_files = glob(f"../output/{source}/{group}/*.csv")
-
+    # input_files = glob(f"./validated/*prediction.csv")
+    
     for f in input_files:
         print(f"Parsing {f}...")
         df = pd.read_csv(f, dtype=object)
