@@ -7,6 +7,51 @@ from train_classifiers import *
 import numpy as np
 import pandas as pd
 
+def test_extraction(df: pd.DataFrame) -> None:
+    metadata = [
+        'Model',
+        'Task_Prefix',
+        'Dataset_Name',
+        'Model_Responses',
+        'Gold_Labels'
+    ]
+
+    models = [
+        "GradientBoosting",
+        "LogisticRegression",
+        "RandomForest"
+    ]
+    targets = [
+        "prediction"
+        # "probability",
+        # "status"
+    ]
+
+    model_results = ["_".join(p) for p in product(models, targets)]
+
+    # row = df.iloc[0, :]
+    problems = 0
+
+    for _, row in df.iterrows():
+        for mrx in model_results:
+            result_values = set()
+            candidates = [c for c in row.keys() if mrx in c]
+            # sort candidates by merge recency
+            candidates.sort(key=lambda x: (x.count("_"), x), reverse=True)
+
+            for pick in candidates:
+                if not np.isnan(row[pick]):
+                    result_values.add(row[pick])
+
+            if len(result_values) > 1:
+                problems += 1
+                print(f"more than one unique value found for {mrx}")
+                # print(result_values)
+                # print(row)
+                # print("{}\t{}\t{}\n".format(pick, row[pick], type(row[pick])))
+    print(f"{problems} misalignments")
+    return
+
 def extract_classification(df: pd.DataFrame) -> pd.DataFrame:
     metadata = [
         'Model',
@@ -22,12 +67,10 @@ def extract_classification(df: pd.DataFrame) -> pd.DataFrame:
         "RandomForest"
     ]
     targets = [
-        # "prediction",
-        # "probability",
-        "status"
+        "prediction",
+        "probability",
+        # "status"
     ]
-
-    print()
 
     model_results = ["_".join(p) for p in product(models, targets)]
             
@@ -43,26 +86,29 @@ def extract_classification(df: pd.DataFrame) -> pd.DataFrame:
         
         for mrx in model_results:
             # get the most recently added column in this type
+            # row_results[mrx] = row[mrx]
             candidates = [c for c in row.keys() if mrx in c]
-
+            
             # sort candidates by merge recency
-            candidates.sort(key=lambda x: x.count("_"), reverse=True)
+            candidates.sort(key=lambda x: (x.count("_"), x), reverse=True)
 
             for pick in candidates:
-                empty = (row[pick] == None) or (row[pick] == np.nan) or (row[pick] == "")
+                empty = (row[pick] == None) or (row[pick] == np.nan) or (row[pick] == "") or (row[pick] == "nan")
                 if pick in row.keys() and not empty:
+                    print(pick.replace(mrx, ""))
+                    print(row[pick])
+                    print("----")
                     row_results[mrx] = row[pick]
                 else:
                     print(f"no value found for {mrx}")
                     print(f"candidates: {candidates}")
 
-            # pick = sorted(candidates, reverse=True, key=lambda x: x.count('_')).pop()
-            # row_results[mrx] = row[pick]
+            pick = sorted(candidates, reverse=True, key=lambda x: x.count('_')).pop()
+            row_results[mrx] = row[pick]
 
         results.append(row_results)
 
     results_df = pd.DataFrame(results)
-    # results_df.fillna(0, inplace=True)
     return results_df
 
 def extract_metrics(df: pd.DataFrame) -> pd.DataFrame:
@@ -208,9 +254,9 @@ if __name__ == "__main__":
     elif args.result_type == "results":
         print("\nExtracting classification results...")
         Z: pd.DataFrame
-        Z = extract_classification(validated_df)
-
-        Z.to_csv(f"classification/all_classification.csv", index=False)
+        # Z = extract_classification(validated_df)
+        Z = test_extraction(validated_df)
+        # Z.to_csv(f"classification/all_classification.csv", index=False)
         # for name, g in Z.groupby('Dataset_Name'):
         #     print(f"Writing classification results for {name}")
         #     g.to_csv(f"classification/{name}_classification.csv", index=False)
